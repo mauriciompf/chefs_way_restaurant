@@ -12,46 +12,67 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/css/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
+  <body class="font-openSans text-pri-blue">
     <header>
-      <nav>
-        <div>
-          <img src="" alt="" />
+      <nav
+        class="w-[90%] py-4 m-auto flex justify-center md:justify-between border-b border-pri-red/50"
+      >
+        <div class="md:flex gap-16 items-center">
+          <div>
+            <div class="inline-block">
+              <img class="w-12" src="./src/images/logo.png" alt="" />
+            </div>
+            <span class="font-bold font-playFair text-5xl">Chef's Way</span>
+          </div>
+          <ul class="hidden md:flex gap-8 text-xl">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Testimonials</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-        </ul>
-        <div>
-          <img src="" alt="" />
-        </div>
+        <button class="max-md:hidden text-2xl" aria-label="Cart items">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
       </nav>
     </header>
     <main>
-      <div>
+      <div class="mt-6 mx-auto w-[90%]">
         <!-- Hero -->
         <section>
-          <h1>Discover Our Exquisite Restaurant</h1>
-          <div>
-            <img src="" alt="" />
-            <img src="" alt="" />
+          <h1 class="mb-4 text-5xl font-playFair text-pri-red">
+            Discover Our Exquisite Restaurant
+          </h1>
+          <div class="-mx-4">
+            <img
+              class="h-[150px] w-full object-cover"
+              src="./src/images/food-hero_1.jpg"
+              alt=""
+            />
+            <!-- <img src="" alt="" /> -->
           </div>
-          <p>
-            Welcome to a world of extraordinary flavors and impeccable service.
+          <p class="text-center my-4 text-lg">
+            Welcome to a world of <strong>extraordinary flavors</strong> and
+            <strong>impeccable service</strong>.
           </p>
           <button>Explore Our Menu</button>
         </section>
@@ -273,6 +294,33 @@
         </footer>
       </div>
     </main>
+    <aside class="md:hidden z-50 relative h-full">
+      <nav class="w-full fixed p-4 bottom-0 bg-gray-400">
+        <ul class="flex gap-4 justify-evenly text-2xl">
+          <li class="grid gap-1 place-items-center">
+            <i class="fa-solid fa-bowl-food"></i>
+            <a class="text-xs" href="#">Menu</a>
+          </li>
+          <li class="grid gap-1 place-items-center">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <a class="text-xs" href="#">About</a>
+          </li>
+          <li class="grid gap-1 place-items-center">
+            <i class="fa-solid fa-star"></i>
+            <a class="text-xs" href="#">Testimonials</a>
+          </li>
+          <li class="grid gap-1 place-items-center">
+            <i class="fa-solid fa-phone"></i>
+            <a class="text-xs" href="#">Contact</a>
+          </li>
+          <li class="grid gap-1 place-items-center">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a class="text-xs" href="#">Cart</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
     <script type="module" src="/src/ts/app.ts"></script>
   </body>
 </html>
