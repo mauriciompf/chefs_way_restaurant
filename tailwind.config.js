@@ -7,6 +7,7 @@ module.exports = {
         "pri-red": "#7F1637",
         "pri-yellow": "#FFC857",
         "pri-brow": "#825C3A",
+        "pri-blue": "#03071e"
       },
       fontFamily: {
         openSans: ["Open Sans", "sans-serif"],
