@@ -56,102 +56,162 @@
       </nav>
     </header>
     <main>
-      <div class="mt-6 mx-auto w-[90%]">
+      <div class="grid gap-6 mt-6 mx-auto w-[90%]">
         <!-- Hero -->
         <section>
-          <h1 class="mb-4 text-5xl font-playFair text-pri-red">
-            Discover Our Exquisite Restaurant
-          </h1>
-          <div class="-mx-4">
-            <img
-              class="h-[150px] w-full object-cover"
-              src="./src/images/food-hero_1.jpg"
-              alt=""
-            />
-            <!-- <img src="" alt="" /> -->
+          <div class="grid gap-6">
+            <span class="text-5xl font-playFair text-pri-red">
+              Discover Our Exquisite Restaurant
+            </span>
+            <div class="-mx-4">
+              <img
+                class="h-[150px] w-full object-cover"
+                src="./src/images/food-hero_1.jpg"
+                alt=""
+              />
+              <!-- <img src="" alt="" /> -->
+            </div>
+            <p class="text-center text-xl">
+              Welcome to a world of <strong>extraordinary flavors</strong> and
+              <strong>impeccable service</strong>.
+            </p>
+            <button class="bg-pri-red text-white py-4 w-full text-xl">
+              Chef's way adress =>
+            </button>
           </div>
-          <p class="text-center my-4 text-lg">
-            Welcome to a world of <strong>extraordinary flavors</strong> and
-            <strong>impeccable service</strong>.
-          </p>
-          <button>Explore Our Menu</button>
         </section>
         <!-- Menu -->
-        <section>
-          <h2>Knowing our menu!</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-            nisi optio deleniti ad cupiditate numquam, nam veniam laborum
-            architecto commodi odio? Provident aliquam blanditiis ratione
-            recusandae, est molestias facilis rerum!
+        <section class="grid gap-4">
+          <h1 class="text-4xl text-pri-red font-bold font-playFair text-center">
+            Knowing our menu!
+          </h1>
+          <p class="text-center text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            vero aliquam, aliquid tenetur repellat possimus?
           </p>
-          <ul>
+          <ul class="text-2xl font-playFair grid grid-cols-2 -mx-4">
             <li>
-              <button>Salad</button>
+              <button
+                class="relative bg-[url('../images/cooked-image_1.jpg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+              >
+                <span class="relative z-10">Meat</span>
+              </button>
             </li>
             <li>
-              <button>Burger</button>
+              <button
+                class="relative bg-[url('../images/burger-image_1.jpg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+              >
+                <span class="relative z-10">Burger</span>
+              </button>
             </li>
             <li>
-              <button>Pizza</button>
+              <button
+                class="relative bg-[url('../images/pizza-image_1.jpg')] bg-cover bg-bottom after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+              >
+                <span class="relative z-10">Pizza</span>
+              </button>
             </li>
             <li>
-              <button>Drink</button>
+              <button
+                class="relative bg-[url('../images/red-wine-image_1.jpg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+              >
+                <span class="relative z-10">Drink</span>
+              </button>
             </li>
             <li>
-              <button>Dessert</button>
+              <button
+                class="relative bg-[url('../images/cake-image_1.jpg')] bg-cover bg-bottom after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+              >
+                <span class="relative z-10">Dessert</span>
+              </button>
             </li>
             <li>
-              <button>Complete Menu</button>
+              <button class="h-full w-full bg-pri-red text-white font-bold">
+                Complete Menu
+              </button>
             </li>
           </ul>
           <div>
-            <article>
-              <div>
-                <img src="" alt="" />
+            <article class="mt-32 px-6 bg-pri-brown rounded-lg">
+              <div class="relative">
+                <img
+                  class="absolute -top-28"
+                  src="./src/images/plate-1.png"
+                  alt="Plate 1"
+                />
               </div>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>
+              <div class="pt-40 text-center grid gap-4 text-white">
+                <span class="text-2xl font-bold font-playFair"
+                  >Lorem Ipsum</span
+                >
+                <p class="-mx-6 text-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Mauris euismod vestibulum semper.
                 </p>
               </div>
-              <div>
-                <span>$12.99</span>
-                <img src="" alt="" />
+              <div
+                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+              >
+                <div class="px-6 py-2 flex items-center justify-between">
+                  <span class="italic font-bold">$12.99</span>
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
               </div>
             </article>
-            <article>
-              <div>
-                <img src="" alt="" />
+            <article class="mt-32 px-6 bg-pri-brown rounded-lg">
+              <div class="relative">
+                <img
+                  class="absolute -top-28"
+                  src="./src/images/plate-2.png"
+                  alt="Plate 2"
+                />
               </div>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>
+              <div class="pt-40 text-center grid gap-4 text-white">
+                <span class="text-center text-2xl font-bold font-playFair"
+                  >Lorem Ipsum</span
+                >
+                <p class="-mx-6 text-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Mauris euismod vestibulum semper.
                 </p>
               </div>
-              <div>
-                <span>$12.99</span>
-                <img src="" alt="" />
+              <div
+                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+              >
+                <div class="px-6 py-2 flex items-center justify-between">
+                  <span class="italic font-bold">$9.99</span>
+                  <button aria-label="Add food">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
               </div>
             </article>
-            <article>
-              <div>
-                <img src="" alt="" />
+            <article class="mt-32 px-6 bg-pri-brown rounded-lg">
+              <div class="relative">
+                <img
+                  class="absolute -top-28"
+                  src="./src/images/plate-3.png"
+                  alt="Plate 3"
+                />
               </div>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>
+              <div class="pt-40 text-center grid gap-4 text-white">
+                <span class="text-center text-2xl font-bold font-playFair"
+                  >Lorem Ipsum</span
+                >
+                <p class="-mx-6 text-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Mauris euismod vestibulum semper.
                 </p>
               </div>
-              <div>
-                <span>$12.99</span>
-                <img src="" alt="" />
+              <div
+                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+              >
+                <div class="px-6 py-2 flex items-center justify-between">
+                  <span class="italic font-bold">$6.99</span>
+                  <button aria-label="Add food">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
               </div>
             </article>
           </div>
