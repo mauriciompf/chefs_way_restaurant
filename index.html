@@ -23,64 +23,105 @@
   <body class="font-openSans text-pri-blue">
     <header>
       <nav
-        class="w-[90%] py-4 m-auto flex justify-center md:justify-between border-b border-pri-red/50"
+        class="w-[90%] py-4 m-auto flex items-center justify-center md:justify-between border-b border-pri-red/50"
       >
-        <div class="md:flex gap-16 items-center">
+        <div class="md:flex gap-24 items-center">
           <div>
             <div class="inline-block">
               <img class="w-12" src="./src/images/logo.svg" alt="" />
             </div>
-            <h1 class="inline-block font-bold font-playFair text-5xl">
+            <h1
+              class="inline-block font-bold font-playFair md:text-6xl text-5xl"
+            >
               Chef's Way
             </h1>
           </div>
-          <ul class="hidden md:flex gap-8 text-xl">
+          <ul class="hidden md:flex gap-8 md:text-2xl text-xl">
             <li>
-              <a href="#">Home</a>
+              <a
+                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline hover:font-bold focus:underline focus:font-bold tracking-[1px] focus:tracking-normal hover:tracking-normal"
+                href="#"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="#">Menu</a>
+              <a
+                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline hover:font-bold focus:underline focus:font-bold tracking-[1px] focus:tracking-normal hover:tracking-normal"
+                href="#"
+                >Menu</a
+              >
             </li>
             <li>
-              <a href="#">About</a>
+              <a
+                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline hover:font-bold focus:underline focus:font-bold tracking-[1px] focus:tracking-normal hover:tracking-normal"
+                href="#"
+                >About</a
+              >
             </li>
             <li>
-              <a href="#">Testimonials</a>
+              <a
+                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline hover:font-bold focus:underline focus:font-bold tracking-[1px] focus:tracking-normal hover:tracking-normal"
+                href="#"
+                >Testimonials</a
+              >
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a
+                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline hover:font-bold focus:underline focus:font-bold tracking-[1px] focus:tracking-normal hover:tracking-normal"
+                href="#"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
-        <button class="max-md:hidden text-2xl" aria-label="Cart items">
+        <button class="max-md:hidden text-3xl" aria-label="Cart items">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </nav>
     </header>
     <main>
-      <div class="grid gap-6 mt-6">
+      <div class="grid gap-20 mt-6">
         <!-- Hero -->
         <section>
           <div class="grid gap-6">
-            <span class="mx-auto w-[90%] text-5xl font-playFair text-pri-red">
+            <span
+              class="md:row-start-2 md:col-start-1 md:text-7xl border-r-2 border-r-pri-red mx-auto w-[90%] text-5xl font-playFair text-pri-red"
+            >
               Discover Our Exquisite Restaurant
             </span>
-            <div>
+            <div class="md:col-[1_/_3] md:row-start-1">
               <img
-                class="h-[150px] w-full object-cover"
+                class="md:h-[70vh] h-[150px] w-full object-cover"
                 src="./src/images/food-hero_1.svg"
-                alt=""
+                alt="hero image 1"
               />
-              <!-- <img src="" alt="" /> -->
             </div>
-            <div class="grid gap-4 mx-auto w-[90%]">
+            <div class="md:col-start-2 grid gap-4 mx-auto w-[90%]">
               <p class="text-center text-xl">
                 Welcome to a world of <strong>extraordinary flavors</strong> and
                 <strong>impeccable service</strong>.
               </p>
-              <button class="bg-pri-red text-white py-4 w-full text-xl">
-                <span>
-                  Explore Our Menu
+              <!-- <button
+                class="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow"
+              >
+                <div
+                  class="absolute inset-0 w-3 bg-amber-400 transition-all duration-[250ms] ease-out group-hover:w-full"
+                ></div>
+                <span class="relative text-black group-hover:text-white"
+                  >Hover me!</span
+                >
+              </button> -->
+              <button
+                class="md:italic md:mx-auto md:w-1/2 rounded-sm bg-pri-red text-white py-4 w-full text-xl shadow-[5px_5px_gray] group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2"
+                ></div>
+                <div
+                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2 ml-auto"
+                ></div>
+                <span class="relative">
+                  Chef's Way near you
                   <i class="ml-2 fa-solid fa-up-right-from-square"></i>
                 </span>
               </button>
@@ -90,7 +131,7 @@
         <!-- Menu -->
         <section class="grid gap-4">
           <h2
-            class="mx-auto w-[90%] text-4xl text-pri-red font-bold font-playFair text-center"
+            class="mx-auto w-[90%] md:text-6xl text-4xl text-pri-red font-bold font-playFair text-center"
           >
             Knowing our menu!
           </h2>
@@ -98,7 +139,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             vero aliquam, aliquid tenetur repellat possimus?
           </p>
-          <ul class="text-2xl font-playFair grid grid-cols-2">
+          <ul class="md:grid-cols-6 text-2xl font-playFair grid grid-cols-2">
             <li>
               <button
                 class="relative bg-[url('../images/cooked-image_1.svg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
@@ -142,7 +183,9 @@
               </button>
             </li>
           </ul>
-          <div class="mx-auto w-[90%]">
+          <div
+            class="md:grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-28 mx-auto w-[90%]"
+          >
             <article class="mt-32 px-6 bg-pri-brown rounded-lg">
               <div class="relative grid place-items-center">
                 <img
