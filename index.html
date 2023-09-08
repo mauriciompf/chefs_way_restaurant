@@ -27,90 +27,122 @@
     />
   </head>
   <body class="font-openSans text-pri-blue">
-    <header class="lg:fixed top-0 left-0 right-0 bg-white z-20">
+    <header class="left-0 right-0 top-0 z-20 bg-white lg:fixed">
       <nav
-        class="w-[90%] py-4 m-auto flex items-center justify-center lg:gap-0 lg:justify-between border-b border-pri-red/50"
+        class="border-pri-red/50 m-auto flex w-[90%] items-center justify-center border-b py-4 lg:justify-between lg:gap-0"
       >
-        <div class="lg:flex lg:gap-4 xl:gap-24 items-center">
+        <div class="items-center lg:flex lg:gap-4 xl:gap-24">
           <div class="flex items-center">
             <div>
               <img
-                class="lg:w-14 xl:w-16 w-12"
+                class="w-12 lg:w-14 xl:w-16"
                 src="./src/images/logo.svg"
                 alt="Chef's way logo"
               />
             </div>
             <h1
-              class="font-bold font-playFair lg:text-4xl text-5xl xl:text-6xl"
+              class="font-playFair text-5xl font-bold lg:text-4xl xl:text-6xl"
             >
               Chef's Way
             </h1>
           </div>
-          <ul class="hidden lg:gap-4 lg:flex gap-8 lg:text-2xl text-xl">
+          <ul class="hidden gap-8 text-xl lg:flex lg:gap-4 lg:text-2xl">
             <li>
               <a
-                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline focus:underline transition-all duration-[150ms]"
+                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
                 href="#"
                 >Home</a
               >
             </li>
             <li>
               <a
-                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline focus:underline transition-all duration-[150ms]"
+                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
                 href="#"
                 >Menu</a
               >
             </li>
             <li>
               <a
-                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline focus:underline transition-all duration-[150ms]"
+                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
                 href="#"
                 >About</a
               >
             </li>
             <li>
               <a
-                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline focus:underline transition-all duration-[150ms]"
+                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
                 href="#"
                 >Testimonials</a
               >
             </li>
             <li>
               <a
-                class="outline-transparent focus:text-pri-red hover:text-pri-red hover:underline focus:underline transition-all duration-[150ms]"
+                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
                 href="#"
                 >Contact</a
               >
             </li>
           </ul>
         </div>
-        <button class="max-lg:hidden text-3xl" aria-label="Cart items">
+        <button class="text-3xl max-lg:hidden" aria-label="Cart items">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </nav>
     </header>
     <main class="lg:mt-32">
-      <div class="grid gap-20 mt-6">
+      <div class="mt-6 grid gap-20">
         <!-- Hero -->
         <section>
           <div class="grid gap-6">
             <span
-              class="lg:row-start-2 lg:col-start-1 lg:text-7xl lg:border-r-2 border-r-pri-red mx-auto w-[90%] text-5xl font-playFair text-pri-red min-[1320px]:pr-4"
+              class="border-r-pri-red font-playFair text-pri-red mx-auto w-[90%] text-5xl lg:col-start-1 lg:row-start-2 lg:border-r-2 lg:text-7xl min-[1320px]:pr-4"
             >
               Discover Our Exquisite Restaurant
             </span>
             <div class="relative lg:col-[1_/_3] lg:row-start-1">
               <div
-                class="max-lg:hidden bg-black/30 absolute h-full w-full"
+                class="absolute h-full w-full bg-black/30 max-lg:hidden"
               ></div>
-              <img
-                class="lg:h-[70vh] h-[150px] w-full object-cover"
-                src="./src/images/food-hero_1.svg"
-                alt="hero image 1"
-              />
-              <div class="max-lg:hidden absolute left-12 bottom-8">
+              <div class="relative h-[70vh] w-auto overflow-hidden">
+                <div
+                  data-wrapper
+                  class="absolute left-0 top-1/2 flex w-full -translate-y-1/2 snap-both snap-mandatory overflow-x-scroll transition-all delay-1000 ease-out"
+                >
+                  <img
+                    data-img
+                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    src="./src/images/food-hero_1.svg"
+                    alt="hero image 1"
+                  />
+                  <img
+                    data-img
+                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    src="./src/images/food-hero_2.jpg"
+                    alt=""
+                  />
+                  <img
+                    data-img
+                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    src="./src/images/food-hero_3.jpg"
+                    alt=""
+                  />
+                  <img
+                    data-img
+                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    src="./src/images/food-hero_4.jpg"
+                    alt=""
+                  />
+                  <img
+                    data-img
+                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    src="./src/images/food-hero_5.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="absolute bottom-8 left-12 max-lg:hidden">
                 <p
-                  class="grid gap-4 mb-8 text-white tracking-widest italic w-1/2"
+                  class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
                 >
                   <span class="text-2xl font-bold">lorem Ipsum</span>
                   <span class="text-xl">
@@ -118,47 +150,48 @@
                     Accusamus vitae tempora maiores."
                   </span>
                 </p>
-                <div class="flex gap-4 justify-start">
+                <div class="flex justify-start gap-4">
                   <button
                     aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-white"
+                    class="bg-pri-red aspect-square w-3 rounded-full"
+                  ></button>
+                  <button
+                    id="second-image"
+                    aria-hidden="true"
+                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
                   ></button>
                   <button
                     aria-hidden="true"
-                    class="w-3 aspect-square rounded-full bg-pri-red"
+                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
                   ></button>
                   <button
                     aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-white"
+                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
                   ></button>
                   <button
                     aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-white"
-                  ></button>
-                  <button
-                    aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-white"
+                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
                   ></button>
                 </div>
               </div>
             </div>
-            <div class="lg:col-start-2 grid gap-4 mx-auto w-[90%]">
-              <p class="lg:h-1/2 my-auto text-center text-xl">
+            <div class="mx-auto grid w-[90%] gap-4 lg:col-start-2">
+              <p class="my-auto text-center text-xl lg:h-1/2">
                 Welcome to a world of <strong>extraordinary flavors</strong> and
                 <strong>impeccable service</strong>.
               </p>
               <button
-                class="min-[1340px]:py-4 lg:italic lg:w-[min(100%,_350px)] lg:py-0 lg:mx-auto rounded-sm bg-pri-red text-white py-4 w-full text-xl shadow-[5px_5px_gray] group relative overflow-hidden"
+                class="bg-pri-red group relative w-full overflow-hidden rounded-sm py-4 text-xl text-white shadow-[5px_5px_gray] lg:mx-auto lg:w-[min(100%,_350px)] lg:py-0 lg:italic min-[1340px]:py-4"
               >
                 <div
-                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
                 ></div>
                 <div
-                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2 ml-auto"
+                  class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
                 ></div>
                 <span class="relative">
                   Chef's Way near you
-                  <i class="ml-2 fa-solid fa-up-right-from-square"></i>
+                  <i class="fa-solid fa-up-right-from-square ml-2"></i>
                 </span>
               </button>
             </div>
@@ -167,65 +200,65 @@
         <!-- Menu -->
         <section class="">
           <h2
-            class="mx-auto w-[90%] lg:text-6xl text-4xl text-pri-red font-bold font-playFair text-center"
+            class="text-pri-red font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:text-6xl"
           >
             Knowing our menu!
           </h2>
-          <p class="mt-4 mx-auto w-[90%] text-center text-xl">
+          <p class="mx-auto mt-4 w-[90%] text-center text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             vero aliquam, aliquid tenetur repellat possimus?
           </p>
           <ul
-            class="my-8 lg:grid-cols-6 text-2xl font-playFair grid grid-cols-2"
+            class="font-playFair my-8 grid grid-cols-2 text-2xl lg:grid-cols-6"
           >
             <li>
               <button
-                class="border-4 border-pri-yellow relative bg-[url('../images/cooked-image_1.svg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+                class="border-pri-yellow relative h-full w-full border-4 bg-[url('../images/cooked-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
               >
                 <span class="relative z-10">Meat</span>
               </button>
             </li>
             <li>
               <button
-                class="relative bg-[url('../images/burger-image_1.svg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+                class="relative h-full w-full bg-[url('../images/burger-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
               >
                 <span class="relative z-10">Burger</span>
               </button>
             </li>
             <li>
               <button
-                class="relative bg-[url('../images/pizza-image_1.svg')] bg-cover bg-bottom after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+                class="relative h-full w-full bg-[url('../images/pizza-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
               >
                 <span class="relative z-10">Pizza</span>
               </button>
             </li>
             <li>
               <button
-                class="relative bg-[url('../images/red-wine-image_1.svg')] bg-cover bg-top after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+                class="relative h-full w-full bg-[url('../images/red-wine-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
               >
                 <span class="relative z-10">Drink</span>
               </button>
             </li>
             <li>
               <button
-                class="relative bg-[url('../images/cake-image_1.svg')] bg-cover bg-bottom after:content-[''] after:absolute py-6 uppercase tracking-widest after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-black/50 font-bold text-white h-full w-full"
+                class="relative h-full w-full bg-[url('../images/cake-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
               >
                 <span class="relative z-10">Dessert</span>
               </button>
             </li>
             <li>
               <button
-                class="px-2 h-full w-full bg-pri-red text-white font-bold"
+                class="bg-pri-red h-full w-full px-2 font-bold text-white"
               >
                 Complete Menu
               </button>
             </li>
           </ul>
           <div
-            class="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-28 mx-auto w-[90%]"
+            class="mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-28"
           >
             <article
-              class="w-[min(100%,_350px)] mx-auto shadow-2xl mt-32 px-6 bg-pri-brown rounded-lg"
+              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
             >
               <div class="relative grid place-items-center">
                 <img
@@ -234,8 +267,8 @@
                   alt="Plate 1"
                 />
               </div>
-              <div class="pt-32 text-center grid gap-4 text-white">
-                <span class="text-2xl font-bold font-playFair"
+              <div class="grid gap-4 pt-32 text-center text-white">
+                <span class="font-playFair text-2xl font-bold"
                   >Lorem Ipsum</span
                 >
                 <p class="text-xl">
@@ -244,16 +277,16 @@
                 </p>
               </div>
               <div
-                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
               >
-                <div class="px-6 py-2 flex items-center justify-between">
-                  <span class="italic font-bold">$12.99</span>
+                <div class="flex items-center justify-between px-6 py-2">
+                  <span class="font-bold italic">$12.99</span>
                   <i class="fa-solid fa-cart-shopping"></i>
                 </div>
               </div>
             </article>
             <article
-              class="w-[min(100%,_350px)] mx-auto shadow-2xl mt-32 px-6 bg-pri-brown rounded-lg"
+              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
             >
               <div class="relative grid place-items-center">
                 <img
@@ -262,8 +295,8 @@
                   alt="Plate 2"
                 />
               </div>
-              <div class="pt-32 text-center grid gap-4 text-white">
-                <span class="text-center text-2xl font-bold font-playFair"
+              <div class="grid gap-4 pt-32 text-center text-white">
+                <span class="font-playFair text-center text-2xl font-bold"
                   >Lorem Ipsum</span
                 >
                 <p class="text-xl">
@@ -272,10 +305,10 @@
                 </p>
               </div>
               <div
-                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
               >
-                <div class="px-6 py-2 flex items-center justify-between">
-                  <span class="italic font-bold">$9.99</span>
+                <div class="flex items-center justify-between px-6 py-2">
+                  <span class="font-bold italic">$9.99</span>
                   <button aria-label="Add food">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
@@ -283,7 +316,7 @@
               </div>
             </article>
             <article
-              class="w-[min(100%,_350px)] mx-auto shadow-2xl mt-32 px-6 bg-pri-brown rounded-lg"
+              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
             >
               <div class="relative grid place-items-center">
                 <img
@@ -292,8 +325,8 @@
                   alt="Plate 3"
                 />
               </div>
-              <div class="pt-32 text-center grid gap-4 text-white">
-                <span class="text-center text-2xl font-bold font-playFair"
+              <div class="grid gap-4 pt-32 text-center text-white">
+                <span class="font-playFair text-center text-2xl font-bold"
                   >Lorem Ipsum</span
                 >
                 <p class="text-xl">
@@ -302,10 +335,10 @@
                 </p>
               </div>
               <div
-                class="-mx-6 mt-4 bg-pri-brown brightness-200 text-xl rounded-b-lg"
+                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
               >
-                <div class="px-6 py-2 flex items-center justify-between">
-                  <span class="italic font-bold">$6.99</span>
+                <div class="flex items-center justify-between px-6 py-2">
+                  <span class="font-bold italic">$6.99</span>
                   <button aria-label="Add food">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </button>
@@ -316,14 +349,14 @@
         </section>
         <!-- About Us -->
         <section
-          class="py-6 shadow-[0px_-20px_11px_9px_rgb(127_22_55)] bg-pri-red"
+          class="bg-pri-red py-6 shadow-[0px_-20px_11px_9px_rgb(127_22_55)]"
         >
-          <div class="lg:grid grid-cols-2 items-center">
+          <div class="grid-cols-2 items-center lg:grid">
             <div
-              class="lg:ml-auto lg:gap-10 lg:w-[90%] lg:items-center grid gap-4 lg:m-0 text-white w-[90%] mx-auto"
+              class="mx-auto grid w-[90%] gap-4 text-white lg:m-0 lg:ml-auto lg:w-[90%] lg:items-center lg:gap-10"
             >
               <h2
-                class="lg:text-6xl text-4xl font-bold font-playFair max-lg:text-center"
+                class="font-playFair text-4xl font-bold max-lg:text-center lg:text-6xl"
               >
                 About us
               </h2>
@@ -333,7 +366,7 @@
                 repellendus, impedit accusamus quis! Quisquam, dolores pariatur?
                 Doloribus laborum cum at quisquam odit!
               </p>
-              <div class="flex justify-between items-center">
+              <div class="flex items-center justify-between">
                 <hr class="w-[35%] border-2 border-white" />
                 <div>
                   <i class="fa-solid fa-asterisk"></i>
@@ -349,23 +382,23 @@
                 reprehenderit similique et fugiat, doloribus quidem!
               </p>
               <button
-                class="w-[min(100%,_350px)] max-lg:mx-auto lg:italic lg:w-1/2 rounded-sm bg-[#D1235A] text-white py-4 text-xl shadow-[-5px_5px__gray] group relative overflow-hidden"
+                class="group relative w-[min(100%,_350px)] overflow-hidden rounded-sm bg-[#D1235A] py-4 text-xl text-white shadow-[-5px_5px__gray] max-lg:mx-auto lg:w-1/2 lg:italic"
               >
                 <div
-                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
                 ></div>
                 <div
-                  class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2 ml-auto"
+                  class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
                 ></div>
                 <span class="relative">
                   More about us
-                  <i class="ml-2 fa-solid fa-up-right-from-square"></i>
+                  <i class="fa-solid fa-up-right-from-square ml-2"></i>
                 </span>
               </button>
             </div>
             <div class="max-lg:hidden">
               <img
-                class="w-[75%] ml-auto"
+                class="ml-auto w-[75%]"
                 src="./src/images/chefe_1.svg"
                 alt=""
               />
@@ -375,15 +408,15 @@
         <!-- Testimonials -->
         <section class="mb-12 grid gap-8">
           <h2
-            class="w-[90%] mx-auto lg:text-6xl text-4xl text-pri-blue font-bold font-playFair text-center lg:mb-12"
+            class="text-pri-blue font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:mb-12 lg:text-6xl"
           >
             Testimonials
           </h2>
           <div
-            class="lg:grid lg:w-[90%] lg:mx-auto grid-cols-3 mx-auto h-full text-center"
+            class="mx-auto h-full grid-cols-3 text-center lg:mx-auto lg:grid lg:w-[90%]"
           >
             <div
-              class="max-lg:hidden relative -top-8 opacity-30 left-24 -z-10 py-4 grid gap-4 rounded-lg bg-gray-200"
+              class="relative -top-8 left-24 -z-10 grid gap-4 rounded-lg bg-gray-200 py-4 opacity-30 max-lg:hidden"
             >
               <div class="grid place-items-center">
                 <img
@@ -393,7 +426,7 @@
                 />
               </div>
               <div>
-                <span class="font-bold text-xl">Lorem Ipsum Dolor</span>
+                <span class="text-xl font-bold">Lorem Ipsum Dolor</span>
                 <div class="text-yellow-300">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -408,7 +441,7 @@
               </p>
             </div>
             <div
-              class="w-[min(100%,_450px)] mx-auto py-4 grid gap-4 rounded-lg bg-gray-200"
+              class="mx-auto grid w-[min(100%,_450px)] gap-4 rounded-lg bg-gray-200 py-4"
             >
               <div class="grid place-items-center">
                 <img
@@ -418,7 +451,7 @@
                 />
               </div>
               <div>
-                <span class="font-bold text-xl">Lorem Ipsum Dolor</span>
+                <span class="text-xl font-bold">Lorem Ipsum Dolor</span>
                 <div class="text-yellow-300">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -433,7 +466,7 @@
               </p>
             </div>
             <div
-              class="max-lg:hidden relative -top-8 opacity-30 right-24 -z-10 py-4 grid gap-4 rounded-lg bg-gray-200"
+              class="relative -top-8 right-24 -z-10 grid gap-4 rounded-lg bg-gray-200 py-4 opacity-30 max-lg:hidden"
             >
               <div class="grid place-items-center">
                 <img
@@ -443,7 +476,7 @@
                 />
               </div>
               <div>
-                <span class="font-bold text-xl">Lorem Ipsum Dolor</span>
+                <span class="text-xl font-bold">Lorem Ipsum Dolor</span>
                 <div class="text-yellow-300">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -458,63 +491,63 @@
               </p>
             </div>
           </div>
-          <div class="flex gap-4 justify-center">
+          <div class="flex justify-center gap-4">
             <button
               aria-hidden="true"
-              class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-gray-400"
+              class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-gray-400"
             ></button>
             <button
               aria-hidden="true"
-              class="w-3 aspect-square rounded-full bg-pri-red"
+              class="bg-pri-red aspect-square w-3 rounded-full"
             ></button>
             <button
               aria-hidden="true"
-              class="hover:bg-pri-yellow focus:bg-pri-yellow w-3 aspect-square rounded-full bg-gray-400"
+              class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-gray-400"
             ></button>
           </div>
         </section>
       </div>
     </main>
     <!-- Footer -->
-    <footer class="bg-pri-red max-lg:mb-[4.5rem] mt-28">
-      <div class="pb-4 lg:pb-12 grid gap-4 relative text-white mx-auto w-[90%]">
+    <footer class="bg-pri-red mt-28 max-lg:mb-[4.5rem]">
+      <div class="relative mx-auto grid w-[90%] gap-4 pb-4 text-white lg:pb-12">
         <div
-          class="lg:grid-cols-[2fr_3fr_1fr] lg:gap-0 lg:items-center lg:p-8 lg:-top-12 absolute shadow-2xl -top-24 w-full grid gap-4 p-5 bg-[#D1235A] rounded-lg"
+          class="absolute -top-24 grid w-full gap-4 rounded-lg bg-[#D1235A] p-5 shadow-2xl lg:-top-12 lg:grid-cols-[2fr_3fr_1fr] lg:items-center lg:gap-0 lg:p-8"
         >
-          <h3 class="lg:text-4xl font-bold font-playFair text-3xl">
+          <h3 class="font-playFair text-3xl font-bold lg:text-4xl">
             Lorem Ipsum
           </h3>
           <div>
             <input
-              class="lg:text-xl lg:w-[95%] lg:pl-6 lg:py-4 text-pri-blue p-2 w-full rounded-lg"
+              class="text-pri-blue w-full rounded-lg p-2 lg:w-[95%] lg:py-4 lg:pl-6 lg:text-xl"
               type="text"
               placeholder="Enter your e-mail..."
             />
           </div>
           <button
-            class="lg:w-full focus:outline-none self-stretch w-1/2 ml-auto bg-white p-2 text-pri-blue font-bold rounded-lg group relative overflow-hidden"
+            class="text-pri-blue group relative ml-auto w-1/2 self-stretch overflow-hidden rounded-lg bg-white p-2 font-bold focus:outline-none lg:w-full"
           >
             <div
-              class="absolute inset-0 w-0 bg-pri-brown transition-all duration-[250ms] ease-out group-hover:w-full group-focus:w-full"
+              class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-full group-focus:w-full"
             ></div>
             <span
-              class="relative group-hover:text-white group-focus:text-white transition-colors"
+              class="relative transition-colors group-hover:text-white group-focus:text-white"
             >
               Lorem Ipsum
             </span>
           </button>
         </div>
         <div
-          class="grid pt-28 lg:pt-36 lg:grid-cols-[2fr_1fr] gap-y-8 lg:items-center"
+          class="grid gap-y-8 pt-28 lg:grid-cols-[2fr_1fr] lg:items-center lg:pt-36"
         >
           <div class="grid gap-4">
-            <div class="flex gap-2 items-center">
+            <div class="flex items-center gap-2">
               <img
                 class="w-12 lg:w-16"
                 src="./src/images/logo.svg"
                 alt="logo"
               />
-              <span class="lg:text-7xl text-5xl font-playFair font-bold"
+              <span class="font-playFair text-5xl font-bold lg:text-7xl"
                 >Chef's Way</span
               >
             </div>
@@ -528,30 +561,30 @@
           <div>
             <ul class="mb-4 flex justify-end gap-8 text-4xl">
               <li>
-                <a class="shadow-2xl group" aria-label="facebook" href="#">
+                <a class="group shadow-2xl" aria-label="facebook" href="#">
                   <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue transition-colors fa-brands fa-square-facebook"
+                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-facebook transition-colors"
                   ></i>
                 </a>
               </li>
               <li>
-                <a class="shadow-2xl group" aria-label="linkedin" href="#">
+                <a class="group shadow-2xl" aria-label="linkedin" href="#">
                   <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue transition-colors fa-brands fa-linkedin"
+                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-linkedin transition-colors"
                   ></i>
                 </a>
               </li>
               <li>
-                <a class="shadow-2xl group" aria-label="instagram" href="#">
+                <a class="group shadow-2xl" aria-label="instagram" href="#">
                   <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue transition-colors fa-brands fa-square-instagram"
+                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-instagram transition-colors"
                   ></i>
                 </a>
               </li>
               <li>
-                <a class="shadow-2xl group" aria-label="home" href="#">
+                <a class="group shadow-2xl" aria-label="home" href="#">
                   <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue transition-colors fa-solid fa-house"
+                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-solid fa-house transition-colors"
                   ></i>
                 </a>
               </li>
@@ -564,10 +597,10 @@
             </ul>
           </div>
           <div
-            class="grid lg:col-start-[1_/_2] grid-cols-[repeat(auto-fit,_minmax(150px_,1fr))] gap-y-4"
+            class="grid grid-cols-[repeat(auto-fit,_minmax(150px_,1fr))] gap-y-4 lg:col-start-[1_/_2]"
           >
             <ul>
-              <li class="font-bold text-xl">lorem ipsum</li>
+              <li class="text-xl font-bold">lorem ipsum</li>
               <li>
                 <a class="hover:underline focus:underline" href="#"
                   >lorem ipsum</a
@@ -590,7 +623,7 @@
               </li>
             </ul>
             <ul>
-              <li class="font-bold text-xl">lorem ipsum</li>
+              <li class="text-xl font-bold">lorem ipsum</li>
               <li>
                 <a class="hover:underline focus:underline" href="#"
                   >lorem ipsum</a
@@ -613,7 +646,7 @@
               </li>
             </ul>
             <ul>
-              <li class="font-bold text-xl">lorem ipsum</li>
+              <li class="text-xl font-bold">lorem ipsum</li>
               <li>
                 <a class="hover:underline focus:underline" href="#"
                   >lorem ipsum</a
@@ -638,7 +671,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-[#D1235A] text-white font-bold text-center p-4">
+      <div class="bg-[#D1235A] p-4 text-center font-bold text-white">
         <p>
           Development by
           <a
@@ -653,37 +686,37 @@
     </footer>
     <aside>
       <a
-        class="lg:w-[5%] lg:right-8 lg:bottom-4 grid place-items-center fixed rounded-full w-10 aspect-square bottom-28 right-4 bg-pri-blue text-white"
+        class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%]"
         aria-label="back to top"
         href="#"
       >
-        <i class="lg:text-3xl fa-solid fa-angle-up"></i>
+        <i class="fa-solid fa-angle-up lg:text-3xl"></i>
       </a>
     </aside>
-    <aside class="lg:hidden z-50 relative h-full">
-      <nav class="w-full fixed p-4 bottom-0 text-white bg-pri-blue">
-        <ul class="flex gap-4 justify-evenly">
+    <aside class="relative z-50 h-full lg:hidden">
+      <nav class="bg-pri-blue fixed bottom-0 w-full p-4 text-white">
+        <ul class="flex justify-evenly gap-4">
           <li>
-            <a class="grid gap-1 place-items-center text-xs" href="#">
-              <i class="text-2xl fa-solid fa-bowl-food"></i>
+            <a class="grid place-items-center gap-1 text-xs" href="#">
+              <i class="fa-solid fa-bowl-food text-2xl"></i>
               <span>Menu</span>
             </a>
           </li>
           <li>
-            <a class="grid gap-1 place-items-center text-xs" href="#">
-              <i class="text-2xl fa-solid fa-circle-exclamation"></i>
+            <a class="grid place-items-center gap-1 text-xs" href="#">
+              <i class="fa-solid fa-circle-exclamation text-2xl"></i>
               <span>About</span>
             </a>
           </li>
           <li>
-            <a class="grid gap-1 place-items-center text-xs" href="#">
-              <i class="text-2xl fa-solid fa-phone"></i>
+            <a class="grid place-items-center gap-1 text-xs" href="#">
+              <i class="fa-solid fa-phone text-2xl"></i>
               <span>Contact</span>
             </a>
           </li>
           <li>
-            <a class="grid gap-1 place-items-center text-xs" href="#">
-              <i class="text-2xl fa-solid fa-cart-shopping"></i>
+            <a class="grid place-items-center gap-1 text-xs" href="#">
+              <i class="fa-solid fa-cart-shopping text-2xl"></i>
               <span>Cart</span>
             </a>
           </li>
