@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="./src/css/input.css" />
     <link rel="stylesheet" href="./src/css/output.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
       rel="shortcut icon"
       href="./src/images/favicon.png"
       type="image/x-icon"
@@ -25,6 +29,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .swiper-pagination {
+        position: absolute !important;
+        text-align: left !important;
+        left: 3rem !important;
+        bottom: 2rem !important;
+      }
+
+      .swiper-pagination > span {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: brown !important;
+      }
+    </style>
   </head>
   <body class="font-openSans text-pri-blue">
     <header class="left-0 right-0 top-0 z-20 bg-white lg:fixed">
@@ -103,76 +124,46 @@
               <div
                 class="absolute h-full w-full bg-black/30 max-lg:hidden"
               ></div>
-              <div class="relative h-[70vh] w-auto overflow-hidden">
-                <div
-                  data-wrapper
-                  class="absolute left-0 top-1/2 flex w-full -translate-y-1/2 snap-both snap-mandatory overflow-x-scroll transition-all delay-1000 ease-out"
-                >
+              <div class="swiper h-[70vh] w-full">
+                <div class="swiper-wrapper">
                   <img
-                    data-img
-                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    class="swiper-slide w-full object-cover lg:h-auto lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
                     src="./src/images/food-hero_1.svg"
                     alt="hero image 1"
                   />
                   <img
-                    data-img
-                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    class="swiper-slide w-full object-cover lg:h-auto lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
                     src="./src/images/food-hero_2.jpg"
                     alt=""
                   />
                   <img
-                    data-img
-                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    class="swiper-slide w-full object-cover lg:h-auto lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
                     src="./src/images/food-hero_3.jpg"
                     alt=""
                   />
                   <img
-                    data-img
-                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    class="swiper-slide w-full object-cover lg:h-auto lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
                     src="./src/images/food-hero_4.jpg"
                     alt=""
                   />
                   <img
-                    data-img
-                    class="w-full snap-start object-cover max-lg:h-[150px] lg:h-auto lg:min-h-[250px] lg:min-w-full"
+                    class="swiper-slide w-full object-cover lg:h-auto lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
                     src="./src/images/food-hero_5.jpg"
                     alt=""
                   />
                 </div>
-              </div>
-              <div class="absolute bottom-8 left-12 max-lg:hidden">
-                <p
-                  class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                >
-                  <span class="text-2xl font-bold">lorem Ipsum</span>
-                  <span class="text-xl">
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusamus vitae tempora maiores."
-                  </span>
-                </p>
-                <div class="flex justify-start gap-4">
-                  <button
-                    aria-hidden="true"
-                    class="bg-pri-red aspect-square w-3 rounded-full"
-                  ></button>
-                  <button
-                    id="second-image"
-                    aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
-                  ></button>
-                  <button
-                    aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
-                  ></button>
-                  <button
-                    aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
-                  ></button>
-                  <button
-                    aria-hidden="true"
-                    class="hover:bg-pri-yellow focus:bg-pri-yellow aspect-square w-3 rounded-full bg-white"
-                  ></button>
+                <div class="z-10 absolute bottom-8 left-12 max-lg:hidden">
+                  <p
+                    class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                  >
+                    <span class="text-2xl font-bold">lorem Ipsum</span>
+                    <span class="text-xl">
+                      "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Accusamus vitae tempora maiores."
+                    </span>
+                  </p>
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
             <div class="mx-auto grid w-[90%] gap-4 lg:col-start-2">
