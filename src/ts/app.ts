@@ -1,30 +1,26 @@
-const wrapper = document.querySelector("[data-wrapper]");
+import Swiper from "swiper";
+import { Navigation, Pagination, Autoplay, Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-console.log(wrapper);
-let isDown = false;
-let startX: any;
-let scrollLeft: any;
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 
-wrapper?.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX - wrapper.offsetLeft;
-  scrollLeft = wrapper.scrollLeft;
-  wrapper.classList.add("snap-none");
-});
-
-wrapper?.addEventListener("mouseleave", () => {
-  isDown = false;
-  wrapper.classList.remove("snap-none");
-});
-wrapper?.addEventListener("mouseup", () => {
-  isDown = false;
-  wrapper.classList.remove("snap-none");
-});
-wrapper?.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - wrapper?.offsetLeft;
-  const SCROLL_SPEED = 3;
-  const walk = (x - startX) * SCROLL_SPEED;
-  wrapper.scrollLeft = scrollLeft - walk;
+const swiper = new Swiper(".swiper", {
+  modules: [Navigation, Pagination, Autoplay, Keyboard],
+  centeredSlides: true,
+  direction: "horizontal",
+  loop: true,
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
