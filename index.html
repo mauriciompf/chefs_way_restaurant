@@ -52,35 +52,46 @@
     </style>
   </head>
   <body class="overflow-x-hidden font-openSans text-pri-blue">
-    <aside id="content-cart" class="hidden h-full relative">
+    <aside class="h-full relative">
       <div
-        class="bg-white fixed h-full top-0 right-0 w-[350px] text-black z-50"
+        id="content-cart"
+        class="border-l-2 border-pri-blue translate-x-[500px] bg-white fixed h-full top-0 right-0 w-[350px] text-black z-50"
       >
-        <div class="mx-auto w-[90%] grid gap-4">
-          <button id="close-cart-btn" class="justify-self-end text-5xl">
+        <div class="mx-auto w-[90%] h-full">
+          <button id="close-cart-btn" class="absolute right-4 text-5xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
-          <div
-            class="flex items-center justify-center gap-8 border-2 border-pri-blue py-4 rounded-sm"
-          >
-            <img class="w-12" src="./src/images/plate-1.svg" alt="" />
-            <div>
-              <span class="font-bold text-xl">Lorem ipsum</span>
-              <div>
-                <span>$125.00</span>
-                <span>x 2</span>
-                <span class="font-bold">$250.00</span>
-              </div>
+          <div class="grid place-items-center h-full">
+            <div class="grid justify-items-center gap-4">
+              <span class="font-bold text-gray-400 text-3xl italic"
+                >No item(s) yet</span
+              >
+              <i class="text-5xl fa-solid fa-face-sad-tear"></i>
             </div>
-            <button class="text-2xl" aria-label="Remove food">
-              <i class="fa-solid fa-trash-can"></i>
+          </div>
+          <div class="hidden">
+            <div
+              class="flex place-items-center gap-8 border-2 border-pri-blue py-4 rounded-sm"
+            >
+              <img class="w-12" src="./src/images/plate-1.svg" alt="" />
+              <div>
+                <span class="font-bold text-xl">Lorem ipsum</span>
+                <div>
+                  <span>$125.00</span>
+                  <span>x 2</span>
+                  <span class="font-bold">$250.00</span>
+                </div>
+              </div>
+              <button class="text-2xl" aria-label="Remove food">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <button
+              class="shadow-2xl text-2xl text-white bg-pri-blue rounded-sm py-4"
+            >
+              Order Now
             </button>
           </div>
-          <button
-            class="shadow-2xl text-2xl text-white bg-pri-blue rounded-sm py-4"
-          >
-            Order Now
-          </button>
         </div>
       </div>
     </aside>
@@ -885,10 +896,12 @@
               aria-label="Enter your e-email"
               placeholder="Enter your e-mail..."
             />
-            <span
-              class="hidden block p-2 rounded-lg bg-red-900 absolute -top-[2.75rem] left-0 italic font-bold text-red-200"
-            >
-            </span>
+            <div>
+              <span
+                class="hidden p-2 rounded-lg bg-red-900 absolute -top-[2.75rem] left-0 italic font-bold text-red-200"
+              >
+              </span>
+            </div>
           </div>
           <button
             id="submit"
