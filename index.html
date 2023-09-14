@@ -52,6 +52,38 @@
     </style>
   </head>
   <body class="overflow-x-hidden font-openSans text-pri-blue">
+    <aside id="content-cart" class="hidden h-full relative">
+      <div
+        class="bg-white fixed h-full top-0 right-0 w-[350px] text-black z-50"
+      >
+        <div class="mx-auto w-[90%] grid gap-4">
+          <button id="close-cart-btn" class="justify-self-end text-5xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div
+            class="flex items-center justify-center gap-8 border-2 border-pri-blue py-4 rounded-sm"
+          >
+            <img class="w-12" src="./src/images/plate-1.svg" alt="" />
+            <div>
+              <span class="font-bold text-xl">Lorem ipsum</span>
+              <div>
+                <span>$125.00</span>
+                <span>x 2</span>
+                <span class="font-bold">$250.00</span>
+              </div>
+            </div>
+            <button class="text-2xl" aria-label="Remove food">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+          <button
+            class="shadow-2xl text-2xl text-white bg-pri-blue rounded-sm py-4"
+          >
+            Order Now
+          </button>
+        </div>
+      </div>
+    </aside>
     <header class="header left-0 right-0 top-0 z-20 bg-white lg:fixed">
       <nav
         class="border-pri-red/50 m-auto flex w-[90%] items-center justify-center border-b py-4 lg:justify-between lg:gap-0"
@@ -62,7 +94,7 @@
               <img
                 class="w-12 lg:w-14 xl:w-16"
                 src="./src/images/logo.svg"
-                alt="Chef's way logo"
+                alt="Chef's way"
               />
             </div>
             <h1
@@ -109,7 +141,11 @@
             </li>
           </ul>
         </div>
-        <button class="text-3xl max-lg:hidden" aria-label="Cart items">
+        <button
+          id="open-cart-btn"
+          class="text-3xl max-lg:hidden"
+          aria-label="Open Cart"
+        >
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </nav>
@@ -242,7 +278,10 @@
                 <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="mx-auto grid w-[90%] gap-4 lg:col-start-2">
+            <div
+              id="trigger-menu"
+              class="mx-auto grid w-[90%] gap-4 lg:col-start-2"
+            >
               <p class="my-auto text-center text-xl lg:h-1/2">
                 Welcome to a world of <strong>extraordinary flavors</strong> and
                 <strong>impeccable service</strong>.
@@ -354,6 +393,7 @@
             </li>
           </ul>
           <div
+            id="trigger-top-btn"
             class="mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] items-center gap-x-28"
           >
             <article
@@ -676,10 +716,12 @@
         </section>
         <!-- About Us -->
         <section
+          id="trigger-about-us"
           class="bg-pri-red py-6 shadow-[0px_-20px_11px_9px_rgb(127_22_55)]"
         >
           <div class="grid-cols-2 items-center lg:grid">
             <div
+              id="content-about-us"
               class="mx-auto grid w-[90%] gap-4 text-white lg:m-0 lg:ml-auto lg:w-[90%] lg:items-center lg:gap-10"
             >
               <h2
@@ -733,7 +775,7 @@
           </div>
         </section>
         <!-- Testimonials -->
-        <section class="mb-12 grid gap-8">
+        <section id="trigger-testimonials" class="mb-12 grid gap-8">
           <h2
             class="text-pri-blue font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:mb-12 lg:text-6xl"
           >
@@ -744,6 +786,7 @@
               class="grid items-center gap-12 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]"
             >
               <div
+                data-testimonials-one
                 class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
               >
                 <div class="grid place-items-center">
@@ -769,6 +812,7 @@
                 </p>
               </div>
               <div
+                data-testimonials-two
                 class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
               >
                 <div class="grid place-items-center">
@@ -794,6 +838,7 @@
                 </p>
               </div>
               <div
+                data-testimonials-three
                 class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
               >
                 <div class="grid place-items-center">
@@ -1006,8 +1051,9 @@
         </p>
       </div>
     </footer>
-    <aside id="top-btn" class="translate-x-24 transition-transform">
+    <aside>
       <a
+        id="top-btn"
         class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%]"
         aria-label="back to top"
         href="#"
