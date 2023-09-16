@@ -55,39 +55,52 @@
     <aside class="h-full relative">
       <div
         id="content-cart"
-        class="border-l-2 border-pri-blue translate-x-[500px] bg-white fixed h-full top-0 right-0 w-[350px] text-black z-50"
+        class="transition-all duration-500 w-0 border-pri-blue bg-white fixed h-full top-0 right-0 text-black z-50"
       >
         <div class="mx-auto w-[90%] h-full">
-          <button id="close-cart-btn" class="absolute right-4 text-5xl">
+          <button id="close-cart-btn" class="absolute left-4 text-5xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
-          <div class="grid place-items-center h-full">
-            <div class="grid justify-items-center gap-4">
-              <span class="font-bold text-gray-400 text-3xl italic"
-                >No item(s) yet</span
-              >
-              <i class="text-5xl fa-solid fa-face-sad-tear"></i>
+          <div class="hidden">
+            <div class="grid place-items-center h-full">
+              <div class="grid justify-items-center gap-4">
+                <span class="font-bold text-gray-400 text-3xl italic"
+                  >No item(s) yet</span
+                >
+                <i class="text-5xl fa-solid fa-face-sad-tear"></i>
+              </div>
             </div>
           </div>
-          <div class="hidden">
+          <div class="grid gap-4 py-16">
             <div
-              class="flex place-items-center gap-8 border-2 border-pri-blue py-4 rounded-sm"
+              class="flex place-items-center gap-8 border-2 border-pri-blue p-4 rounded-sm"
             >
-              <img class="w-12" src="./src/images/plate-1.svg" alt="" />
-              <div>
-                <span class="font-bold text-xl">Lorem ipsum</span>
+              <div class="flex gap-2">
+                <img class="w-12" src="./src/images/plate-1.svg" alt="" />
                 <div>
-                  <span>$125.00</span>
-                  <span>x 2</span>
-                  <span class="font-bold">$250.00</span>
+                  <span class="font-bold text-lg">Product Name Afase</span>
+                  <div>
+                    <span>$11.00</span>
+                    <span> /2 plates</span>
+                  </div>
                 </div>
               </div>
-              <button class="text-2xl" aria-label="Remove food">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
+              <div class="text-xl flex gap-4">
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 flex">
+            <div
+              class="w-1/2 text-xl bg-pri-yellow text-pri-blue font-bold p-4"
+            >
+              <span>Total: $11.00</span>
+              <span>Plates: 1</span>
             </div>
             <button
-              class="shadow-2xl text-2xl text-white bg-pri-blue rounded-sm py-4"
+              class="w-1/2 text-xl text-white bg-pri-blue rounded-sm py-4"
             >
               Order Now
             </button>
@@ -95,1015 +108,1030 @@
         </div>
       </div>
     </aside>
-    <header class="header left-0 right-0 top-0 z-20 bg-white lg:fixed">
-      <nav
-        class="border-pri-red/50 m-auto flex w-[90%] items-center justify-center border-b py-4 lg:justify-between lg:gap-0"
-      >
-        <div class="items-center lg:flex lg:gap-4 xl:gap-24">
-          <div class="flex items-center">
-            <div>
-              <img
-                class="w-12 lg:w-14 xl:w-16"
-                src="./src/images/logo.svg"
-                alt="Chef's way"
-              />
-            </div>
-            <h1
-              class="font-playFair text-5xl font-bold lg:text-4xl xl:text-6xl"
-            >
-              Chef's Way
-            </h1>
-          </div>
-          <ul class="hidden gap-8 text-xl lg:flex lg:gap-4 lg:text-2xl">
-            <li>
-              <a
-                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
-                href="#"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
-                href="#"
-                >Menu</a
-              >
-            </li>
-            <li>
-              <a
-                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
-                href="#"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
-                href="#"
-                >Testimonials</a
-              >
-            </li>
-            <li>
-              <a
-                class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
-                href="#"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-        <button
-          id="open-cart-btn"
-          class="text-3xl max-lg:hidden"
-          aria-label="Open Cart"
+    <div id="container" class="transition-all duration-500">
+      <header class="header left-0 right-0 top-0 z-20 bg-white lg:fixed">
+        <nav
+          class="border-pri-red/50 m-auto flex w-[90%] items-center justify-center border-b py-4 lg:justify-between lg:gap-0"
         >
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-      </nav>
-    </header>
-    <main class="lg:mt-32">
-      <div class="mt-6 grid gap-20">
-        <!-- Hero -->
-        <section>
-          <div class="grid gap-6">
-            <span
-              class="border-r-pri-red font-playFair text-pri-red mx-auto w-[90%] text-5xl lg:col-start-1 lg:row-start-2 lg:border-r-2 lg:text-7xl min-[1320px]:pr-4"
-            >
-              Discover Our Exquisite Restaurant
-            </span>
-            <div class="relative lg:col-[1_/_3] lg:row-start-1">
-              <div class="swiper h-[70vh] w-full">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide !w-full">
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
-                      <p
-                        class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                      >
-                        <span class="text-2xl font-bold">Lorem Ipsum</span>
-                        <span class="text-xl">
-                          "Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Accusamus vitae tempora maiores."
-                        </span>
-                      </p>
-                    </div>
-                    <img
-                      class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
-                      src="./src/images/food-hero_1.svg"
-                      alt="hero image 1"
-                    />
-                  </div>
-                  <div class="swiper-slide !w-full">
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
-                      <p
-                        class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                      >
-                        <span class="text-2xl font-bold">Lorem Ipsum</span>
-                        <span class="text-xl">
-                          "Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Nemo quam quibusdam rerum, corrupti asperiores
-                          obcaecati!"
-                        </span>
-                      </p>
-                    </div>
-                    <img
-                      class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
-                      src="./src/images/food-hero_2.jpg"
-                      alt="hero image 2"
-                    />
-                  </div>
-                  <div class="swiper-slide !w-full">
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
-                      <p
-                        class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                      >
-                        <span class="text-2xl font-bold">Lorem Ipsum</span>
-                        <span class="text-xl">
-                          "Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ullam, ex."
-                        </span>
-                      </p>
-                    </div>
-                    <img
-                      class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
-                      src="./src/images/food-hero_3.jpg"
-                      alt="hero image 3"
-                    />
-                  </div>
-                  <div class="swiper-slide !w-full">
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
-                      <p
-                        class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                      >
-                        <span class="text-2xl font-bold">Lorem Ipsum</span>
-                        <span class="text-xl">
-                          "Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Accusantium iure optio doloremque libero quos
-                          earum quas, blanditiis numquam ipsa porro error
-                          corrupti."
-                        </span>
-                      </p>
-                    </div>
-                    <img
-                      class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
-                      src="./src/images/food-hero_4.jpg"
-                      alt="hero image 4"
-                    />
-                  </div>
-                  <div class="swiper-slide !w-full">
-                    <div
-                      class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
-                    ></div>
-                    <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
-                      <p
-                        class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
-                      >
-                        <span class="text-2xl font-bold">Lorem Ipsum</span>
-                        <span class="text-xl">
-                          "Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Architecto libero veniam maiores."
-                        </span>
-                      </p>
-                    </div>
-                    <img
-                      class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
-                      src="./src/images/food-hero_5.jpg"
-                      alt="hero image 5"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
+          <div class="items-center lg:flex lg:gap-4 xl:gap-24">
+            <div class="flex items-center">
+              <div>
+                <img
+                  class="w-12 lg:w-14 xl:w-16"
+                  src="./src/images/logo.svg"
+                  alt="Chef's way"
+                />
               </div>
+              <h1
+                class="font-playFair text-5xl font-bold lg:text-4xl xl:text-6xl"
+              >
+                Chef's Way
+              </h1>
             </div>
-            <div
-              id="trigger-menu"
-              class="mx-auto grid w-[90%] gap-4 lg:col-start-2"
-            >
-              <p class="my-auto text-center text-xl lg:h-1/2">
-                Welcome to a world of <strong>extraordinary flavors</strong> and
-                <strong>impeccable service</strong>.
-              </p>
-              <button
-                class="bg-pri-red group relative w-full overflow-hidden rounded-sm py-4 text-xl text-white shadow-[5px_5px_gray] lg:mx-auto lg:w-[min(100%,_350px)] lg:py-0 lg:italic min-[1340px]:py-4"
-              >
-                <div
-                  class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
-                ></div>
-                <div
-                  class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
-                ></div>
-                <span class="relative">
-                  Chef's Way near you
-                  <i class="fa-solid fa-up-right-from-square ml-2"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-        </section>
-        <!-- Menu -->
-        <section id="menu-section">
-          <h2
-            id="menu"
-            class="text-pri-red font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:text-6xl"
-          >
-            Knowing our menu!
-          </h2>
-          <p class="mx-auto mt-4 w-[90%] text-center text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            vero aliquam, aliquid tenetur repellat possimus?
-          </p>
-          <ul
-            class="font-playFair my-8 grid grid-cols-2 text-2xl lg:grid-cols-6"
-          >
-            <li>
-              <button
-                data-filter-btn
-                data-filter="meat"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/cooked-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
-                  >Meat</span
+            <ul class="hidden gap-8 text-xl lg:flex lg:gap-4 lg:text-2xl">
+              <li>
+                <a
+                  class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
+                  href="#"
+                  >Home</a
                 >
-              </button>
-            </li>
-            <li>
-              <button
-                data-filter-btn
-                data-filter="burger"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/burger-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
-                  >Burger</span
+              </li>
+              <li>
+                <a
+                  class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
+                  href="#"
+                  >Menu</a
                 >
-              </button>
-            </li>
-            <li>
-              <button
-                data-filter-btn
-                data-filter="pizza"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/pizza-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
-                  >Pizza</span
+              </li>
+              <li>
+                <a
+                  class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
+                  href="#"
+                  >About</a
                 >
-              </button>
-            </li>
-            <li>
-              <button
-                data-filter-btn
-                data-filter="drink"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/red-wine-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
-                  >Drink</span
+              </li>
+              <li>
+                <a
+                  class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
+                  href="#"
+                  >Testimonials</a
                 >
-              </button>
-            </li>
-            <li>
-              <button
-                data-filter-btn
-                data-filter="dessert"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/cake-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
-                  >Dessert</span
+              </li>
+              <li>
+                <a
+                  class="focus:text-pri-red hover:text-pri-red outline-transparent transition-all duration-[150ms] hover:underline focus:underline"
+                  href="#"
+                  >Contact</a
                 >
-              </button>
-            </li>
-            <li>
-              <button
-                data-filter-btn
-                data-filter="all"
-                class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow border-pri-yellow border-4 bg-pri-red h-full w-full py-6 uppercase px-2 font-bold text-white"
-              >
-                <span
-                  class="group-hover:text-pri-yellow group-focus:text-pri-yellow text-pri-yellow"
-                >
-                  Complete Menu
-                </span>
-              </button>
-            </li>
-          </ul>
-          <div
-            id="trigger-top-btn"
-            class="mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] items-center gap-x-28"
-          >
-            <article
-              data-filter-item
-              data-category="meat"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-28 w-[min(100%,_220px)]"
-                  src="./src/images/plate-1.svg"
-                  alt="Plate 1"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris euismod vestibulum semper.
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$12.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="meat"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-28 w-[min(100%,_220px)]"
-                  src="./src/images/plate-2.svg"
-                  alt="Plate 2"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris euismod vestibulum semper.
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$9.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="meat"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-28 w-[min(100%,_220px)]"
-                  src="./src/images/plate-3.svg"
-                  alt="Plate 3"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris euismod vestibulum semper.
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$6.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="burger"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-20 w-[min(100%,_220px)]"
-                  src="./src/images/plate-burger.png"
-                  alt="Plate burger"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Corrupti voluptatibus ex excepturi!
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$3.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="pizza"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-24 w-[min(100%,_220px)]"
-                  src="./src/images/plate-pizza-1.png"
-                  alt="Plate pizza"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                  officiis blanditiis veniam voluptates!
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$9.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="pizza"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-24 w-[min(100%,_220px)]"
-                  src="./src/images/plate-pizza-2.png"
-                  alt="Plate pizza 2"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  atque recusandae quisquam!
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$7.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="pizza"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-24 w-[min(100%,_220px)]"
-                  src="./src/images/plate-pizza-3.png"
-                  alt="Plate pizza 3"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Velit ut quidem tenetur. Maxime?
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$11.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="drink"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-24 w-[min(100%,_220px)]"
-                  src="./src/images/plate-drink.png"
-                  alt="Drink"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Sapiente, nulla sint.
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$3.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="dessert"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-28 w-[min(100%,_220px)]"
-                  src="./src/images/plate-dessert-1.png"
-                  alt="Dessert 1"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$4.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-            <article
-              data-filter-item
-              data-category="dessert"
-              class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
-            >
-              <div class="relative grid place-items-center">
-                <img
-                  class="absolute -top-24 w-[min(100%,_220px)]"
-                  src="./src/images/plate-dessert-2.png"
-                  alt="Dessert 2"
-                />
-              </div>
-              <div class="grid gap-4 pt-32 text-center text-white">
-                <span class="font-playFair text-center text-2xl font-bold"
-                  >Lorem Ipsum</span
-                >
-                <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-              <div
-                class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-              >
-                <div class="flex items-center justify-between px-6 py-2">
-                  <span class="font-bold italic">$3.99</span>
-                  <button aria-label="Add food">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-        <!-- About Us -->
-        <section
-          id="trigger-about-us"
-          class="bg-pri-red py-6 shadow-[0px_-20px_11px_9px_rgb(127_22_55)]"
-        >
-          <div class="grid-cols-2 items-center lg:grid">
-            <div
-              id="content-about-us"
-              class="mx-auto grid w-[90%] gap-4 text-white lg:m-0 lg:ml-auto lg:w-[90%] lg:items-center lg:gap-10"
-            >
-              <h2
-                class="font-playFair text-4xl font-bold max-lg:text-center lg:text-6xl"
-              >
-                About us
-              </h2>
-              <p class="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-                tenetur, sit sint, voluptate esse reiciendis nobis eos
-                repellendus, impedit accusamus quis! Quisquam, dolores pariatur?
-                Doloribus laborum cum at quisquam odit!
-              </p>
-              <div class="flex items-center justify-between">
-                <hr class="w-[35%] border-2 border-white" />
-                <div>
-                  <i class="fa-solid fa-asterisk"></i>
-                  <i class="fa-solid fa-asterisk"></i>
-                  <i class="fa-solid fa-asterisk"></i>
-                </div>
-                <hr class="w-[35%] border-2 border-white" />
-              </div>
-              <p class="text-lg">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eveniet suscipit commodi dicta dolorum magnam cum ratione
-                deserunt minus excepturi enim officia quibusdam ducimus cumque
-                reprehenderit similique et fugiat, doloribus quidem!
-              </p>
-              <button
-                class="group relative w-[min(100%,_350px)] overflow-hidden rounded-sm bg-[#D1235A] py-4 text-xl text-white shadow-[-5px_5px__gray] max-lg:mx-auto lg:w-1/2 lg:italic"
-              >
-                <div
-                  class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
-                ></div>
-                <div
-                  class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
-                ></div>
-                <span class="relative">
-                  More about us
-                  <i class="fa-solid fa-up-right-from-square ml-2"></i>
-                </span>
-              </button>
-            </div>
-            <div class="max-lg:hidden">
-              <img
-                class="ml-auto w-[75%]"
-                src="./src/images/chefe_1.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </section>
-        <!-- Testimonials -->
-        <section id="trigger-testimonials" class="mb-12 grid gap-8">
-          <h2
-            class="text-pri-blue font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:mb-12 lg:text-6xl"
-          >
-            Testimonials
-          </h2>
-          <div class="w-[90%] mx-auto">
-            <div
-              class="grid items-center gap-12 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]"
-            >
-              <div
-                data-testimonials-one
-                class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
-              >
-                <div class="grid place-items-center">
-                  <img
-                    class="w-[20%] rounded-full"
-                    src="./src/images/avatar_1.svg"
-                    alt="Ana Kievg"
-                  />
-                </div>
-                <div class="text-center">
-                  <span class="text-xl font-bold">Ana Kievg</span>
-                  <div class="text-yellow-300 flex gap-4 justify-center mt-4">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                </div>
-                <p class="text-center mx-auto text-gray-600 w-[90%] text-base">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Explicabo, consequuntur. Incidunt perspiciatis laborum odio?
-                </p>
-              </div>
-              <div
-                data-testimonials-two
-                class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
-              >
-                <div class="grid place-items-center">
-                  <img
-                    class="w-[20%] rounded-full"
-                    src="./src/images/avatar_2.jpg"
-                    alt="Sima Fos"
-                  />
-                </div>
-                <div class="text-center">
-                  <span class="text-xl font-bold">Sima Fos</span>
-                  <div class="text-yellow-300 flex gap-4 justify-center mt-4">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                </div>
-                <p class="text-center mx-auto text-gray-600 w-[90%] text-base">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quaerat temporibus optio cumque?
-                </p>
-              </div>
-              <div
-                data-testimonials-three
-                class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
-              >
-                <div class="grid place-items-center">
-                  <img
-                    class="w-[20%] rounded-full"
-                    src="./src/images/avatar_3.jpg"
-                    alt="Syna Catea"
-                  />
-                </div>
-                <div class="text-center">
-                  <span class="text-xl font-bold">Syna Catea</span>
-                  <div class="text-yellow-300 flex gap-4 justify-center mt-4">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                </div>
-                <p class="text-center mx-auto text-gray-600 w-[90%] text-base">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Provident laboriosam a, aut, exercitationem veritatis animi
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-pri-red mt-28 max-lg:mb-[4.5rem]">
-      <div class="relative mx-auto grid w-[90%] gap-4 pb-4 text-white lg:pb-12">
-        <div
-          class="absolute -top-24 grid w-full gap-4 rounded-lg bg-[#D1235A] p-5 shadow-2xl lg:-top-12 lg:grid-cols-[2fr_3fr_1fr] lg:items-center lg:gap-0 lg:p-8"
-        >
-          <h3 class="font-playFair text-3xl font-bold lg:text-4xl">
-            Lorem Ipsum
-          </h3>
-          <div class="relative">
-            <input
-              id="input"
-              class="text-pri-blue w-full rounded-lg p-2 lg:w-[95%] lg:py-4 lg:pl-6 lg:text-xl"
-              type="text"
-              aria-label="Enter your e-email"
-              placeholder="Enter your e-mail..."
-            />
-            <div>
-              <span
-                class="hidden p-2 rounded-lg bg-red-900 absolute -top-[2.75rem] left-0 italic font-bold text-red-200"
-              >
-              </span>
-            </div>
+              </li>
+            </ul>
           </div>
           <button
-            id="submit"
-            class="text-pri-blue group relative ml-auto w-1/2 self-stretch overflow-hidden rounded-lg bg-white p-2 font-bold focus:outline-none lg:w-full"
+            id="open-cart-btn"
+            class="text-3xl max-lg:hidden relative"
+            aria-label="Open Cart"
           >
             <div
-              class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-full group-focus:w-full"
-            ></div>
-            <span
-              class="relative transition-colors group-hover:text-white group-focus:text-white"
+              class="bg-pri-red w-5 aspect-square text-white font-bold rounded-full text-sm absolute -top-1 -right-2"
             >
-              Lorem Ipsum
-            </span>
-          </button>
-        </div>
-        <div
-          class="grid gap-y-8 pt-28 lg:grid-cols-[2fr_1fr] lg:items-center lg:pt-36"
-        >
-          <div class="grid gap-4">
-            <div class="flex items-center gap-2">
-              <img
-                class="w-12 lg:w-16"
-                src="./src/images/logo.svg"
-                alt="logo"
-              />
-              <span class="font-playFair text-5xl font-bold lg:text-7xl"
-                >Chef's Way</span
-              >
+              0
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
-              provident repellendus consequatur doloribus nostrum aperiam
-              doloremque quis cum expedita error! Ut soluta repellendus illo
-              repellat laudantium facilis doloremque dicta. Vero.
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </nav>
+      </header>
+      <main class="lg:mt-32">
+        <div class="mt-6 grid gap-20">
+          <!-- Hero -->
+          <section>
+            <div class="grid gap-6">
+              <span
+                class="border-r-pri-red font-playFair text-pri-red mx-auto w-[90%] text-5xl lg:col-start-1 lg:row-start-2 lg:border-r-2 lg:text-7xl min-[1320px]:pr-4"
+              >
+                Discover Our Exquisite Restaurant
+              </span>
+              <div class="relative lg:col-[1_/_3] lg:row-start-1">
+                <div class="swiper h-[70vh] w-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide !w-full">
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
+                        <p
+                          class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                        >
+                          <span class="text-2xl font-bold">Lorem Ipsum</span>
+                          <span class="text-xl">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Accusamus vitae tempora maiores."
+                          </span>
+                        </p>
+                      </div>
+                      <img
+                        class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
+                        src="./src/images/food-hero_1.svg"
+                        alt="hero image 1"
+                      />
+                    </div>
+                    <div class="swiper-slide !w-full">
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
+                        <p
+                          class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                        >
+                          <span class="text-2xl font-bold">Lorem Ipsum</span>
+                          <span class="text-xl">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo quam quibusdam rerum, corrupti asperiores
+                            obcaecati!"
+                          </span>
+                        </p>
+                      </div>
+                      <img
+                        class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
+                        src="./src/images/food-hero_2.jpg"
+                        alt="hero image 2"
+                      />
+                    </div>
+                    <div class="swiper-slide !w-full">
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
+                        <p
+                          class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                        >
+                          <span class="text-2xl font-bold">Lorem Ipsum</span>
+                          <span class="text-xl">
+                            "Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Ullam, ex."
+                          </span>
+                        </p>
+                      </div>
+                      <img
+                        class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
+                        src="./src/images/food-hero_3.jpg"
+                        alt="hero image 3"
+                      />
+                    </div>
+                    <div class="swiper-slide !w-full">
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
+                        <p
+                          class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                        >
+                          <span class="text-2xl font-bold">Lorem Ipsum</span>
+                          <span class="text-xl">
+                            "Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Accusantium iure optio doloremque libero quos
+                            earum quas, blanditiis numquam ipsa porro error
+                            corrupti."
+                          </span>
+                        </p>
+                      </div>
+                      <img
+                        class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
+                        src="./src/images/food-hero_4.jpg"
+                        alt="hero image 4"
+                      />
+                    </div>
+                    <div class="swiper-slide !w-full">
+                      <div
+                        class="absolute h-full w-full z-10 bg-black/30 max-lg:hidden"
+                      ></div>
+                      <div class="z-30 absolute bottom-8 left-12 max-lg:hidden">
+                        <p
+                          class="mb-8 grid w-1/2 gap-4 italic tracking-widest text-white"
+                        >
+                          <span class="text-2xl font-bold">Lorem Ipsum</span>
+                          <span class="text-xl">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Architecto libero veniam maiores."
+                          </span>
+                        </p>
+                      </div>
+                      <img
+                        class="w-full object-cover lg:!h-full lg:min-h-[250px] lg:min-w-full max-lg:h-[150px]"
+                        src="./src/images/food-hero_5.jpg"
+                        alt="hero image 5"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div
+                id="trigger-menu"
+                class="mx-auto grid w-[90%] gap-4 lg:col-start-2"
+              >
+                <p class="my-auto text-center text-xl lg:h-1/2">
+                  Welcome to a world of
+                  <strong>extraordinary flavors</strong> and
+                  <strong>impeccable service</strong>.
+                </p>
+                <button
+                  class="bg-pri-red group relative w-full overflow-hidden rounded-sm py-4 text-xl text-white shadow-[5px_5px_gray] lg:mx-auto lg:w-[min(100%,_350px)] lg:py-0 lg:italic min-[1340px]:py-4"
+                >
+                  <div
+                    class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  ></div>
+                  <div
+                    class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  ></div>
+                  <span class="relative">
+                    Chef's Way near you
+                    <i class="fa-solid fa-up-right-from-square ml-2"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- Menu -->
+          <section id="menu-section">
+            <h2
+              id="menu"
+              class="text-pri-red font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:text-6xl"
+            >
+              Knowing our menu!
+            </h2>
+            <p class="mx-auto mt-4 w-[90%] text-center text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              vero aliquam, aliquid tenetur repellat possimus?
             </p>
-          </div>
-          <div>
-            <ul class="mb-4 flex justify-end gap-8 text-4xl">
+            <ul
+              class="font-playFair my-8 grid grid-cols-2 text-2xl lg:grid-cols-6"
+            >
               <li>
-                <a class="group shadow-2xl" aria-label="facebook" href="#">
-                  <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-facebook transition-colors"
-                  ></i>
-                </a>
+                <button
+                  data-filter-btn
+                  data-filter="meat"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/cooked-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
+                    >Meat</span
+                  >
+                </button>
               </li>
               <li>
-                <a class="group shadow-2xl" aria-label="linkedin" href="#">
-                  <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-linkedin transition-colors"
-                  ></i>
-                </a>
+                <button
+                  data-filter-btn
+                  data-filter="burger"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/burger-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
+                    >Burger</span
+                  >
+                </button>
               </li>
               <li>
-                <a class="group shadow-2xl" aria-label="instagram" href="#">
-                  <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-instagram transition-colors"
-                  ></i>
-                </a>
+                <button
+                  data-filter-btn
+                  data-filter="pizza"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/pizza-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
+                    >Pizza</span
+                  >
+                </button>
               </li>
               <li>
-                <a class="group shadow-2xl" aria-label="home" href="#">
-                  <i
-                    class="group-hover:text-pri-blue group-focus:text-pri-blue fa-solid fa-house transition-colors"
-                  ></i>
-                </a>
+                <button
+                  data-filter-btn
+                  data-filter="drink"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/red-wine-image_1.svg')] bg-cover bg-top py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
+                    >Drink</span
+                  >
+                </button>
+              </li>
+              <li>
+                <button
+                  data-filter-btn
+                  data-filter="dessert"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow relative h-full w-full bg-[url('../images/cake-image_1.svg')] bg-cover bg-bottom py-6 font-bold uppercase tracking-widest text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:top-0 after:bg-black/50 after:content-['']"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
+                    >Dessert</span
+                  >
+                </button>
+              </li>
+              <li>
+                <button
+                  data-filter-btn
+                  data-filter="all"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow border-pri-yellow border-4 bg-pri-red h-full w-full py-6 uppercase px-2 font-bold text-white"
+                >
+                  <span
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow text-pri-yellow"
+                  >
+                    Complete Menu
+                  </span>
+                </button>
               </li>
             </ul>
-            <ul class="text-right">
-              <li>Email: fariasmauricio11@outlook.com</li>
-              <li>Phone: +55 (27) 98137-8468</li>
-              <li>Vila Velha, ES - Brazil</li>
-              <li>Website: chefsway.com</li>
-            </ul>
+            <div
+              id="trigger-top-btn"
+              class="mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] items-center gap-x-28"
+            >
+              <article
+                data-filter-item
+                data-category="meat"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-28 w-[min(100%,_220px)]"
+                    src="./src/images/plate-1.svg"
+                    alt="Plate 1"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-2xl font-bold"
+                    >Galactic Gourmet</span
+                  >
+                  <p class="text-xl">
+                    Smoky BBQ Ribs: Tender, tangy, and irresistible.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$12.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="meat"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-28 w-[min(100%,_220px)]"
+                    src="./src/images/plate-2.svg"
+                    alt="Plate 2"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Rainbow Velvet Dream</span
+                  >
+                  <p class="text-xl">
+                    Spicy Sausage Links: Fiery, flavorful, and sizzling.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$9.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="meat"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-28 w-[min(100%,_220px)]"
+                    src="./src/images/plate-3.svg"
+                    alt="Plate 3"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Enchanted Forest Fusion</span
+                  >
+                  <p class="text-xl">
+                    Juicy Bacon Strips: Crispy, savory, and mouthwatering.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$6.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="burger"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-20 w-[min(100%,_220px)]"
+                    src="./src/images/plate-burger.png"
+                    alt="Plate burger"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Moonlight Mango Tango</span
+                  >
+                  <p class="text-xl">
+                    Classic Cheeseburger: Juicy, cheesy, and satisfying.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$3.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="pizza"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-24 w-[min(100%,_220px)]"
+                    src="./src/images/plate-pizza-1.png"
+                    alt="Plate pizza"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Celestial Crispy Nebula</span
+                  >
+                  <p class="text-xl">
+                    Pepperoni Supreme: Cheesy, zesty, and loaded.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$9.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="pizza"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-24 w-[min(100%,_220px)]"
+                    src="./src/images/plate-pizza-2.png"
+                    alt="Plate pizza 2"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Oceanic Oasis</span
+                  >
+                  <p class="text-xl">
+                    Veggie Delight: Fresh, colorful, and wholesome.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$7.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="pizza"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-24 w-[min(100%,_220px)]"
+                    src="./src/images/plate-pizza-3.png"
+                    alt="Plate pizza 3"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Mystical Midnight</span
+                  >
+                  <p class="text-xl">
+                    Hawaiian Bliss: Sweet, savory, and tropical.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$11.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="drink"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-24 w-[min(100%,_220px)]"
+                    src="./src/images/plate-drink.png"
+                    alt="Drink"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Sunshine Serenade</span
+                  >
+                  <p class="text-xl">
+                    Tropical Paradise: Refreshing, fruity, and exotic.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$3.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="dessert"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-28 w-[min(100%,_220px)]"
+                    src="./src/images/plate-dessert-1.png"
+                    alt="Dessert 1"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Whimsical Wonderland</span
+                  >
+                  <p class="text-xl">
+                    Chocolate Decadence: Rich, velvety, and indulgent.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$4.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                data-filter-item
+                data-category="dessert"
+                class="bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+              >
+                <div class="relative grid place-items-center">
+                  <img
+                    class="absolute -top-24 w-[min(100%,_220px)]"
+                    src="./src/images/plate-dessert-2.png"
+                    alt="Dessert 2"
+                  />
+                </div>
+                <div class="grid gap-4 pt-32 text-center text-white">
+                  <span class="font-playFair text-center text-2xl font-bold"
+                    >Electric Eel Euphoria</span
+                  >
+                  <p class="text-xl">
+                    Berry Bliss Parfait: Sweet, creamy, and fruity.
+                  </p>
+                </div>
+                <div
+                  class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
+                >
+                  <div class="flex items-center justify-between px-6 py-2">
+                    <span class="font-bold italic">$3.99</span>
+                    <button data-add-cart-btn aria-label="Add food">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!-- About Us -->
+          <section
+            id="trigger-about-us"
+            class="bg-pri-red py-6 shadow-[0px_-20px_11px_9px_rgb(127_22_55)]"
+          >
+            <div class="grid-cols-2 items-center lg:grid">
+              <div
+                id="content-about-us"
+                class="mx-auto grid w-[90%] gap-4 text-white lg:m-0 lg:ml-auto lg:w-[90%] lg:items-center lg:gap-10"
+              >
+                <h2
+                  class="font-playFair text-4xl font-bold max-lg:text-center lg:text-6xl"
+                >
+                  About us
+                </h2>
+                <p class="text-lg">
+                  Chef's Way, a gastronomic sanctuary where culinary artistry
+                  meets fitness innovation. Here, each dish is a masterpiece of
+                  flavor and health, a symphony of fresh, locally-sourced
+                  ingredients orchestrated to perfection. Savor the elegance of
+                  wellness in every bite, as Chef's Way takes you on a culinary
+                  journey that nourishes both body and soul.
+                </p>
+                <div class="flex items-center justify-between">
+                  <hr class="w-[35%] border-2 border-white" />
+                  <div>
+                    <i class="fa-solid fa-asterisk"></i>
+                    <i class="fa-solid fa-asterisk"></i>
+                    <i class="fa-solid fa-asterisk"></i>
+                  </div>
+                  <hr class="w-[35%] border-2 border-white" />
+                </div>
+                <p class="text-lg">
+                  At Chef's Way, indulgence meets vitality in a harmony of taste
+                  and wellness. This upscale restaurant redefines the dining
+                  experience by serving up exquisite, guilt-free creations that
+                  delight the senses and respect your fitness goals. With every
+                  plate, you'll discover the delectable fusion of flavor and
+                  nutrition, a testament to the artistry of cuisine and the
+                  pursuit of a healthier, happier you.
+                </p>
+                <button
+                  class="group relative w-[min(100%,_350px)] overflow-hidden rounded-sm bg-[#D1235A] py-4 text-xl text-white shadow-[-5px_5px__gray] max-lg:mx-auto lg:w-1/2 lg:italic"
+                >
+                  <div
+                    class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  ></div>
+                  <div
+                    class="bg-pri-brown absolute inset-0 ml-auto w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
+                  ></div>
+                  <span class="relative">
+                    More about us
+                    <i class="fa-solid fa-up-right-from-square ml-2"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="max-lg:hidden">
+                <img
+                  class="ml-auto w-[75%]"
+                  src="./src/images/chefe_1.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+          <!-- Testimonials -->
+          <section id="trigger-testimonials" class="mb-12 grid gap-8">
+            <h2
+              class="text-pri-blue font-playFair mx-auto w-[90%] text-center text-4xl font-bold lg:mb-12 lg:text-6xl"
+            >
+              Testimonials
+            </h2>
+            <div class="w-[90%] mx-auto">
+              <div
+                class="grid items-center gap-12 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]"
+              >
+                <div
+                  data-testimonials-one
+                  class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
+                >
+                  <div class="grid place-items-center">
+                    <img
+                      class="w-[20%] rounded-full"
+                      src="./src/images/avatar_1.svg"
+                      alt="Ana Kievg"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <span class="text-xl font-bold">Ana M.</span>
+                    <div class="text-yellow-300 flex gap-4 justify-center mt-4">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <p
+                    class="text-center mx-auto text-gray-600 w-[90%] text-base"
+                  >
+                    Chef's Way redefined dining for me – a taste of heaven
+                    without compromising my health!
+                  </p>
+                </div>
+                <div
+                  data-testimonials-two
+                  class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
+                >
+                  <div class="grid place-items-center">
+                    <img
+                      class="w-[20%] rounded-full"
+                      src="./src/images/avatar_2.jpg"
+                      alt="Sima Fos"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <span class="text-xl font-bold">Sima P.</span>
+                    <div class="text-yellow-300 flex gap-4 justify-center mt-4">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <p
+                    class="text-center mx-auto text-gray-600 w-[90%] text-base"
+                  >
+                    Delightfully surprised at Chef's Way! Flavor-packed dishes
+                    that keep me on track.
+                  </p>
+                </div>
+                <div
+                  data-testimonials-three
+                  class="shadow-2xl border-4 border-pri-yellow grid gap-4 rounded-lg py-4"
+                >
+                  <div class="grid place-items-center">
+                    <img
+                      class="w-[20%] rounded-full"
+                      src="./src/images/avatar_3.jpg"
+                      alt="Syna Catea"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <span class="text-xl font-bold">Syna F.</span>
+                    <div class="text-yellow-300 flex gap-4 justify-center mt-4">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <p
+                    class="text-center mx-auto text-gray-600 w-[90%] text-base"
+                  >
+                    Healthy has never tasted this good! Thanks, Chef's Way, for
+                    the guilt-free indulgence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="bg-pri-red mt-28 max-lg:mb-[4.5rem]">
+        <div
+          class="relative mx-auto grid w-[90%] gap-4 pb-4 text-white lg:pb-12"
+        >
+          <div
+            class="absolute -top-24 grid w-full gap-4 rounded-lg bg-[#D1235A] p-5 shadow-2xl lg:-top-12 lg:grid-cols-[2fr_3fr_1fr] lg:items-center lg:gap-0 lg:p-8"
+          >
+            <h3 class="font-playFair text-3xl font-bold lg:text-4xl">
+              Lorem Ipsum
+            </h3>
+            <div class="relative">
+              <input
+                id="input"
+                class="text-pri-blue w-full rounded-lg p-2 lg:w-[95%] lg:py-4 lg:pl-6 lg:text-xl"
+                type="text"
+                aria-label="Enter your e-email"
+                placeholder="Enter your e-mail..."
+              />
+              <div>
+                <span
+                  class="hidden p-2 rounded-lg bg-red-900 absolute -top-[2.75rem] left-0 italic font-bold text-red-200"
+                >
+                </span>
+              </div>
+            </div>
+            <button
+              id="submit"
+              class="text-pri-blue group relative ml-auto w-1/2 self-stretch overflow-hidden rounded-lg bg-white p-2 font-bold focus:outline-none lg:w-full"
+            >
+              <div
+                class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-full group-focus:w-full"
+              ></div>
+              <span
+                class="relative transition-colors group-hover:text-white group-focus:text-white"
+              >
+                Lorem Ipsum
+              </span>
+            </button>
           </div>
           <div
-            class="grid grid-cols-[repeat(auto-fit,_minmax(150px_,1fr))] gap-y-4 lg:col-start-[1_/_2]"
+            class="grid gap-y-8 pt-28 lg:grid-cols-[2fr_1fr] lg:items-center lg:pt-36"
           >
-            <ul>
-              <li class="text-xl font-bold">lorem ipsum</li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
+            <div class="grid gap-4">
+              <div class="flex items-center gap-2">
+                <img
+                  class="w-12 lg:w-16"
+                  src="./src/images/logo.svg"
+                  alt="logo"
+                />
+                <span class="font-playFair text-5xl font-bold lg:text-7xl"
+                  >Chef's Way</span
                 >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-            </ul>
-            <ul>
-              <li class="text-xl font-bold">lorem ipsum</li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-            </ul>
-            <ul>
-              <li class="text-xl font-bold">lorem ipsum</li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-              <li>
-                <a class="hover:underline focus:underline" href="#"
-                  >lorem ipsum</a
-                >
-              </li>
-            </ul>
+              </div>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+                provident repellendus consequatur doloribus nostrum aperiam
+                doloremque quis cum expedita error! Ut soluta repellendus illo
+                repellat laudantium facilis doloremque dicta. Vero.
+              </p>
+            </div>
+            <div>
+              <ul class="mb-4 flex justify-end gap-8 text-4xl">
+                <li>
+                  <a class="group shadow-2xl" aria-label="facebook" href="#">
+                    <i
+                      class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-facebook transition-colors"
+                    ></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="group shadow-2xl" aria-label="linkedin" href="#">
+                    <i
+                      class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-linkedin transition-colors"
+                    ></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="group shadow-2xl" aria-label="instagram" href="#">
+                    <i
+                      class="group-hover:text-pri-blue group-focus:text-pri-blue fa-brands fa-square-instagram transition-colors"
+                    ></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="group shadow-2xl" aria-label="home" href="#">
+                    <i
+                      class="group-hover:text-pri-blue group-focus:text-pri-blue fa-solid fa-house transition-colors"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="text-right">
+                <li>Email: fariasmauricio11@outlook.com</li>
+                <li>Phone: +55 (27) 98137-8468</li>
+                <li>Vila Velha, ES - Brazil</li>
+                <li>Website: chefsway.com</li>
+              </ul>
+            </div>
+            <div
+              class="grid grid-cols-[repeat(auto-fit,_minmax(150px_,1fr))] gap-y-4 lg:col-start-[1_/_2]"
+            >
+              <ul>
+                <li class="text-xl font-bold">lorem ipsum</li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li class="text-xl font-bold">lorem ipsum</li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li class="text-xl font-bold">lorem ipsum</li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:underline focus:underline" href="#"
+                    >lorem ipsum</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="bg-[#D1235A] p-4 text-center font-bold text-white">
-        <p>
-          Development by
-          <a
-            class="text-pri-yellow hover:underline focus:underline"
-            href="https://github.com/mauriciompf"
-            target="_blank"
-            title="Github profile"
-            >Maurício P. Farias.</a
-          >
-        </p>
-      </div>
-    </footer>
-    <aside>
-      <a
-        id="top-btn"
-        class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%]"
-        aria-label="back to top"
-        href="#"
-      >
-        <i class="fa-solid fa-angle-up lg:text-3xl"></i>
-      </a>
-    </aside>
-    <aside class="relative z-50 h-full lg:hidden">
-      <nav class="bg-pri-blue fixed bottom-0 w-full p-4 text-white">
-        <ul class="flex justify-evenly gap-4">
-          <li>
-            <a class="grid place-items-center gap-1 text-xs" href="#">
-              <i class="fa-solid fa-bowl-food text-2xl"></i>
-              <span>Menu</span>
-            </a>
-          </li>
-          <li>
-            <a class="grid place-items-center gap-1 text-xs" href="#">
-              <i class="fa-solid fa-circle-exclamation text-2xl"></i>
-              <span>About</span>
-            </a>
-          </li>
-          <li>
-            <a class="grid place-items-center gap-1 text-xs" href="#">
-              <i class="fa-solid fa-phone text-2xl"></i>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li>
-            <a class="grid place-items-center gap-1 text-xs" href="#">
-              <i class="fa-solid fa-cart-shopping text-2xl"></i>
-              <span>Cart</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+        <div class="bg-[#D1235A] p-4 text-center font-bold text-white">
+          <p>
+            Development by
+            <a
+              class="text-pri-yellow hover:underline focus:underline"
+              href="https://github.com/mauriciompf"
+              target="_blank"
+              title="Github profile"
+              >Maurício P. Farias.</a
+            >
+          </p>
+        </div>
+      </footer>
+      <aside>
+        <a
+          id="top-btn"
+          class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%]"
+          aria-label="back to top"
+          href="#"
+        >
+          <i class="fa-solid fa-angle-up lg:text-3xl"></i>
+        </a>
+      </aside>
+      <aside class="relative z-50 h-full lg:hidden">
+        <nav class="bg-pri-blue fixed bottom-0 w-full p-4 text-white">
+          <ul class="flex justify-evenly gap-4">
+            <li>
+              <a class="grid place-items-center gap-1 text-xs" href="#">
+                <i class="fa-solid fa-bowl-food text-2xl"></i>
+                <span>Menu</span>
+              </a>
+            </li>
+            <li>
+              <a class="grid place-items-center gap-1 text-xs" href="#">
+                <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a class="grid place-items-center gap-1 text-xs" href="#">
+                <i class="fa-solid fa-phone text-2xl"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li>
+              <a class="grid place-items-center gap-1 text-xs" href="#">
+                <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                <span>Cart</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
     <script type="module" src="/src/ts/app.ts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
