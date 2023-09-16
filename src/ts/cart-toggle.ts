@@ -1,41 +1,21 @@
-const contentCart = document.querySelector("#content-cart")!;
-let isOpen = false;
+const contentCart = document.querySelector("#content-cart") as HTMLElement;
+const container = document.querySelector("#container") as HTMLElement;
 
-function toggleCart() {
-  if (isOpen) {
-    animateCloseCart();
-    isOpen = false;
-  } else {
-    animateOpenCart();
-    isOpen = true;
-  }
+function openCart() {
+  contentCart.style.width = "350px";
+  container.style.marginRight = "350px";
+  contentCart.classList.add("border-l-2");
 }
 
-function animateOpenCart() {
-  // @ts-ignore
-
-  gsap.to(contentCart, {
-    duration: 1,
-    ease: "power3.inout",
-    x: 0,
-  });
-}
-
-function animateCloseCart() {
-  // @ts-ignore
-
-  gsap.to(contentCart, {
-    duration: 1,
-    ease: "power3.inout",
-    x: 500,
-  });
+function closeCart() {
+  contentCart.style.width = "0";
+  container.style.marginRight = "0";
+  contentCart.classList.remove("border-l-2");
 }
 
 export default (() => {
+  document.querySelector("#open-cart-btn")?.addEventListener("click", openCart);
   document
-    .querySelector("#open-cart-btn")!
-    .addEventListener("click", toggleCart);
-  document
-    .querySelector("#close-cart-btn")!
-    .addEventListener("click", toggleCart);
+    .querySelector("#close-cart-btn")
+    ?.addEventListener("click", closeCart);
 })();
