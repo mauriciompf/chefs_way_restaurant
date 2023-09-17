@@ -1,3 +1,5 @@
+import "./plates";
+
 // @ts-ignore
 let tl = gsap.timeline();
 
