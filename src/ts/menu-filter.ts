@@ -1,3 +1,5 @@
+import "./plates";
+
 const buttons = document.querySelectorAll("[data-filter-btn]");
 const items = document.querySelectorAll("[data-filter-item]");
 
