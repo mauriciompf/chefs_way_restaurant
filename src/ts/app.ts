@@ -11,6 +11,7 @@ import "./main/menu/menu-filter.ts";
 import "./main/menu/menu-anim.ts";
 import "./main/menu/plates/plates.ts";
 import "./main/menu/plates/cart/cart-toggle.ts";
+import "./main/menu/plates/cart/add-cart.ts";
 
 // ABOUT US
 import "./main/about-us/about-us-anim.ts";
