@@ -61,43 +61,26 @@
           <button id="close-cart-btn" class="absolute left-4 text-5xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
-          <div class="hidden">
+          <div id="no-plates">
             <div class="grid place-items-center h-full">
               <div class="grid justify-items-center gap-4">
                 <span class="font-bold text-gray-400 text-3xl italic"
-                  >No item(s) yet</span
+                  >No plate(s) yet</span
                 >
                 <i class="text-5xl fa-solid fa-face-sad-tear"></i>
               </div>
             </div>
           </div>
-          <div class="grid gap-4 py-16">
-            <div
-              class="flex place-items-center gap-8 border-2 border-pri-blue p-4 rounded-sm"
-            >
-              <div class="flex gap-2">
-                <img class="w-12" src="./src/images/plate-1.svg" alt="" />
-                <div>
-                  <span class="font-bold text-lg">Product Name Afase</span>
-                  <div>
-                    <span>$11.00</span>
-                    <span> /2 plates</span>
-                  </div>
-                </div>
-              </div>
-              <div class="text-xl flex gap-4">
-                <button>-</button>
-                <span>0</span>
-                <button>+</button>
-              </div>
-            </div>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 flex">
+          <div id="list-cart" class="grid gap-4 py-16"></div>
+          <div
+            id="no-plates-bottom"
+            class="hidden absolute bottom-0 left-0 right-0 flex"
+          >
             <div
               class="w-1/2 text-xl bg-pri-yellow text-pri-blue font-bold p-4"
             >
-              <span>Total: $11.00</span>
-              <span>Plates: 1</span>
+              <span>Total: $<span id="total-price">0</span></span>
+              <span>Plates: <span id="total-quantity">1</span></span>
             </div>
             <button
               class="w-1/2 text-xl text-white bg-pri-blue rounded-sm py-4"
