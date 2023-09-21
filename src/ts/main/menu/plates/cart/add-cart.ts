@@ -1,15 +1,25 @@
-import "../plates";
+import "../displayPlates";
+import { Plate } from "../displayPlates";
 
-export function addCart(cart) {
-  const listCarts = document.querySelector("#list-cart")!;
+const listCarts = document.querySelector("#list-cart") as HTMLElement;
+const noPlates = document.querySelector("#no-plates") as HTMLElement;
+const totalCartHTML = document.querySelector(
+  "#total-quantity-cart"
+) as HTMLElement;
+const noPlatesBottom = document.querySelector(
+  "#no-plates-bottom"
+) as HTMLElement;
+const totalQuantityHTML = document.querySelector(
+  "#total-quantity"
+) as HTMLElement;
+const totalPriceHTML = document.querySelector("#total-price") as HTMLElement;
+
+export function addCart(cart: Plate[]) {
   let totalQuantity = 0;
   let totalPrice = 0;
 
-  const noPlates = document.querySelector("#no-plates");
-  const noPlatesBottom = document.querySelector("#no-plates-bottom");
-
-  noPlates?.classList.add("hidden");
-  noPlatesBottom?.classList.remove("hidden");
+  noPlates.classList.add("hidden");
+  noPlatesBottom.classList.remove("hidden");
 
   listCarts.innerHTML = "";
 
@@ -38,13 +48,18 @@ export function addCart(cart) {
 
     listCarts?.appendChild(newCart);
 
-    const decreaseButton = document.querySelector(`#decrease-btn-${index}`);
-    const increaseButton = document.querySelector(`#increase-btn-${index}`);
+    const decreaseButton = document.querySelector(
+      `#decrease-btn-${index}`
+    ) as HTMLElement;
+    const increaseButton = document.querySelector(
+      `#increase-btn-${index}`
+    ) as HTMLElement;
 
-    decreaseButton?.addEventListener("click", () => {
+    decreaseButton.addEventListener("click", () => {
       plate.quantity--;
-      document.querySelector(`#quantity-${index}`)!.textContent =
-        plate.quantity;
+      document.querySelector(
+        `#quantity-${index}`
+      )!.textContent = `${plate.quantity}`;
 
       if (plate.quantity <= 0) {
         cart.splice(index, 1);
@@ -54,10 +69,11 @@ export function addCart(cart) {
       updateTotalValues();
     });
 
-    increaseButton?.addEventListener("click", () => {
+    increaseButton.addEventListener("click", () => {
       plate.quantity++;
-      document.querySelector(`#quantity-${index}`)!.textContent =
-        plate.quantity;
+      document.querySelector(
+        `#quantity-${index}`
+      )!.textContent = `${plate.quantity}`;
 
       updateTotalValues();
     });
@@ -75,9 +91,8 @@ export function addCart(cart) {
       noPlatesBottom?.classList.add("hidden");
     }
 
-    const totalQuantityHTML = document.querySelector("#total-quantity");
-    const totalPriceHTML = document.querySelector("#total-price");
-    totalQuantityHTML.textContent = totalQuantity;
+    totalQuantityHTML.textContent = `${totalQuantity}`;
     totalPriceHTML.textContent = totalPrice.toFixed(2);
+    totalCartHTML.textContent = `${totalQuantity}`;
   }
 }
