@@ -1,4 +1,4 @@
-import "./plates/plates";
+import "./plates/displayPlates";
 import { animateItem } from "./menu-anim";
 
 const buttons = document.querySelectorAll("[data-filter-btn]");
