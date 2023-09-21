@@ -57,12 +57,12 @@
         id="content-cart"
         class="transition-all duration-500 w-0 border-pri-blue bg-white fixed h-full top-0 right-0 text-black z-50"
       >
-        <div class="mx-auto w-[90%] h-full">
+        <div class="mx-auto my-4 w-[90%] h-full">
           <button id="close-cart-btn" class="absolute left-4 text-5xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
           <div id="no-plates">
-            <div class="grid place-items-center h-full">
+            <div class="grid place-items-center h-screen">
               <div class="grid justify-items-center gap-4">
                 <span class="font-bold text-gray-400 text-3xl italic"
                   >No plate(s) yet</span
@@ -74,19 +74,21 @@
           <div id="list-cart" class="grid gap-4 py-16"></div>
           <div
             id="no-plates-bottom"
-            class="hidden absolute bottom-0 left-0 right-0 flex"
+            class="hidden absolute bottom-0 left-0 right-0"
           >
-            <div
-              class="w-1/2 text-xl bg-pri-yellow text-pri-blue font-bold p-4"
-            >
-              <span>Total: $<span id="total-price">0</span></span>
-              <span>Plates: <span id="total-quantity">1</span></span>
+            <div class="flex">
+              <div
+                class="w-1/2 text-xl bg-pri-yellow text-pri-blue font-bold p-4"
+              >
+                <span>Total: $<span id="total-price"></span></span>
+                <span>Plates: <span id="total-quantity"></span></span>
+              </div>
+              <button
+                class="w-1/2 text-xl text-white bg-pri-blue rounded-sm py-4"
+              >
+                Order Now
+              </button>
             </div>
-            <button
-              class="w-1/2 text-xl text-white bg-pri-blue rounded-sm py-4"
-            >
-              Order Now
-            </button>
           </div>
         </div>
       </div>
@@ -97,7 +99,7 @@
           class="border-pri-red/50 m-auto flex w-[90%] items-center justify-center border-b py-4 lg:justify-between lg:gap-0"
         >
           <div class="items-center lg:flex lg:gap-4 xl:gap-24">
-            <div class="flex items-center">
+            <div class="flex items-center max-md:gap-4">
               <div>
                 <img
                   class="select-none w-12 lg:w-14 xl:w-16"
@@ -105,9 +107,7 @@
                   alt="Chef's way"
                 />
               </div>
-              <h1
-                class="font-playFair text-5xl font-bold lg:text-4xl xl:text-6xl"
-              >
+              <h1 class="font-playFair text-4xl font-bold xl:text-6xl">
                 Chef's Way
               </h1>
             </div>
@@ -155,6 +155,7 @@
             aria-label="Open Cart"
           >
             <div
+              id="total-quantity-cart"
               class="bg-pri-red w-5 aspect-square text-white font-bold rounded-full text-sm absolute -top-1 -right-2"
             >
               0
@@ -174,9 +175,9 @@
                 Discover Our Exquisite Restaurant
               </span>
               <div class="relative lg:col-[1_/_3] lg:row-start-1">
-                <div class="swiper h-[70vh] w-full">
+                <div class="swiper lg:h-[70vh] max-lg:h-full w-full">
                   <div id="hero-images" class="swiper-wrapper"></div>
-                  <div class="swiper-pagination"></div>
+                  <div class="max-lg:hidden swiper-pagination"></div>
                 </div>
               </div>
               <div
@@ -189,7 +190,7 @@
                   <strong>impeccable service</strong>.
                 </p>
                 <button
-                  class="bg-pri-red group relative w-full overflow-hidden rounded-sm py-4 text-xl text-white shadow-[5px_5px_gray] lg:mx-auto lg:w-[min(100%,_350px)] lg:py-0 lg:italic min-[1340px]:py-4"
+                  class="bg-pri-red group relative w-full overflow-hidden rounded-sm py-4 text-xl text-white shadow-[5px_5px_gray] lg:mx-auto lg:w-[min(100%,_320px)] lg:py-0 lg:italic min-[1340px]:py-4"
                 >
                   <div
                     class="bg-pri-brown absolute inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-1/2 group-focus:w-1/2"
@@ -296,7 +297,7 @@
             </ul>
             <div
               id="trigger-top-btn"
-              class="list-plates mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] items-center gap-x-28"
+              class="list-plates mx-auto grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))] items-center gap-x-28"
             ></div>
           </section>
           <!-- About Us -->
@@ -570,7 +571,7 @@
       <aside>
         <a
           id="top-btn"
-          class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%]"
+          class="bg-pri-blue fixed bottom-28 right-4 grid aspect-square w-10 place-items-center rounded-full text-white lg:bottom-4 lg:right-8 lg:w-[5%] z-10"
           aria-label="back to top"
           href="#"
         >
