@@ -1,5 +1,3 @@
-import "./plates/plates";
-
 // Menu scale
 // @ts-ignore
 gsap.from("[data-filter-item]", {
