@@ -9,9 +9,9 @@ import "./main/hero_images/hero-carousel.ts";
 // MENU SECTION
 import "./main/menu/menu-filter.ts";
 import "./main/menu/menu-anim.ts";
-import "./main/menu/plates/plates.ts";
+import "./main/menu/plates/displayPlates.ts";
 import "./main/menu/plates/cart/cart-toggle.ts";
-import "./main/menu/plates/cart/add-cart.ts";
+import "./main/menu/plates/headerButtonAnim.ts";
 
 // ABOUT US
 import "./main/about-us/about-us-anim.ts";
