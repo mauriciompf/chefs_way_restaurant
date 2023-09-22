@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./hero-images";
 
-export default (() => {
+export default ((): void => {
   new Swiper(".swiper", {
     modules: [Pagination, Autoplay, Keyboard],
     centeredSlides: true,
