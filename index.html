@@ -57,7 +57,7 @@
         id="content-cart"
         class="transition-all duration-500 w-0 border-pri-blue bg-white fixed h-full top-0 right-0 text-black z-50"
       >
-        <div class="mx-auto my-4 w-[90%] h-full">
+        <div class="my-4 px-4 h-full overflow-auto">
           <button id="close-cart-btn" class="absolute left-4 text-5xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -71,7 +71,7 @@
               </div>
             </div>
           </div>
-          <div id="list-cart" class="grid gap-4 py-16"></div>
+          <div id="list-cart" class="grid gap-4 pt-16 pb-28"></div>
           <div
             id="no-plates-bottom"
             class="hidden absolute bottom-0 left-0 right-0"
@@ -285,10 +285,10 @@
                 <button
                   data-filter-btn
                   data-filter="all"
-                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow border-pri-yellow border-4 bg-pri-red h-full w-full py-6 uppercase px-2 font-bold text-white"
+                  class="group hover:border-4 hover:border-pri-yellow focus:border-4 focus:border-pri-yellow border-4 border-pri-yellow bg-pri-red h-full w-full py-6 uppercase px-2 font-bold text-white"
                 >
                   <span
-                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow text-pri-yellow"
+                    class="group-hover:text-pri-yellow group-focus:text-pri-yellow relative z-10"
                   >
                     Complete Menu
                   </span>
