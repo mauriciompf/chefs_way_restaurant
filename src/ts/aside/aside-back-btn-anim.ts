@@ -1,5 +1,6 @@
 // @ts-ignore
-// Top back x position
+
+// The animation will be triggered when the element enters the viewport.
 let topButton = gsap.timeline({
   scrollTrigger: {
     trigger: "#trigger-top-btn",
@@ -8,6 +9,7 @@ let topButton = gsap.timeline({
   },
 });
 
+// Animate the element by moving it horizontally.
 topButton.from("#top-btn", {
   x: 1000,
   duration: 1,
