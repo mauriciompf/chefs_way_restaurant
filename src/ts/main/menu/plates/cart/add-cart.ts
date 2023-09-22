@@ -14,52 +14,74 @@ const totalQuantityHTML = document.querySelector(
 ) as HTMLElement;
 const totalPriceHTML = document.querySelector("#total-price") as HTMLElement;
 
-export function addCart(cart: Plate[]) {
+export function addCart(cart: Plate[]): void {
   let totalQuantity = 0;
   let totalPrice = 0;
+
+  listCarts.textContent = "";
 
   noPlates.classList.add("hidden");
   noPlatesBottom.classList.remove("hidden");
 
-  listCarts.innerHTML = "";
-
-  cart.forEach((plate, index) => {
+  cart.forEach((plate: Plate, index: number): void => {
     updateTotalValues();
 
     const newCart = document.createElement("div");
-    newCart.innerHTML = `
-      <div class="flex place-items-center gap-8 border-2 border-pri-blue p-4 rounded-sm">
-        <div class="flex gap-2">
-          <img class="w-12 object-contain" src="${plate.image}" alt="${plate.name}" />
-          <div>
-            <span class="font-bold text-lg">${plate.name}</span>
-            <div>
-              <span>$${plate.price}</span>
-            </div>
-          </div>
-        </div>
-        <div class="text-xl flex gap-4">
-          <button id="decrease-btn-${index}">-</button>
-          <span id="quantity-${index}">${plate.quantity}</span>
-          <button id="increase-btn-${index}">+</button>
-        </div>
-      </div>
-    `;
+    newCart.classList.add(
+      "flex",
+      "justify-between",
+      "place-items-center",
+      "gap-4",
+      "border-2",
+      "border-pri-blue",
+      "p-4",
+      "rounded-sm"
+    );
 
-    listCarts?.appendChild(newCart);
+    const img = document.createElement("img");
+    img.classList.add("w-12", "object-contain");
+    img.src = plate.image;
+    img.alt = plate.name;
 
-    const decreaseButton = document.querySelector(
-      `#decrease-btn-${index}`
-    ) as HTMLElement;
-    const increaseButton = document.querySelector(
-      `#increase-btn-${index}`
-    ) as HTMLElement;
+    const nameDiv = document.createElement("div");
+    const nameLabel = document.createElement("span");
+    nameLabel.classList.add("font-bold");
+    nameLabel.textContent = plate.name;
+    const priceDiv = document.createElement("div");
+    const priceLabel = document.createElement("span");
+    priceLabel.textContent = `$${plate.price}`;
 
-    decreaseButton.addEventListener("click", () => {
-      plate.quantity--;
-      document.querySelector(
-        `#quantity-${index}`
-      )!.textContent = `${plate.quantity}`;
+    const quantityDiv = document.createElement("div");
+    const decreaseButton = createButton("-", `decrease-btn-${index}`);
+    const quantitySpan = document.createElement("span");
+    quantitySpan.id = `quantity-${index}`;
+    quantitySpan.textContent = plate.quantity.toString();
+    const increaseButton = createButton("+", `increase-btn-${index}`);
+
+    nameDiv.appendChild(nameLabel);
+    priceDiv.appendChild(priceLabel);
+    quantityDiv.appendChild(decreaseButton);
+    quantityDiv.appendChild(quantitySpan);
+    quantityDiv.appendChild(increaseButton);
+
+    newCart.appendChild(img);
+    newCart.appendChild(nameDiv);
+    newCart.appendChild(priceDiv);
+    newCart.appendChild(quantityDiv);
+
+    listCarts.appendChild(newCart);
+
+    decreaseButton.addEventListener("click", (): void => {
+      updateQuantity(-1);
+    });
+
+    increaseButton.addEventListener("click", (): void => {
+      updateQuantity(1);
+    });
+
+    function updateQuantity(change: number): void {
+      plate.quantity += change;
+      quantitySpan.textContent = plate.quantity.toString();
 
       if (plate.quantity <= 0) {
         cart.splice(index, 1);
@@ -67,22 +89,23 @@ export function addCart(cart: Plate[]) {
       }
 
       updateTotalValues();
-    });
-
-    increaseButton.addEventListener("click", () => {
-      plate.quantity++;
-      document.querySelector(
-        `#quantity-${index}`
-      )!.textContent = `${plate.quantity}`;
-
-      updateTotalValues();
-    });
+    }
   });
 
-  function updateTotalValues() {
-    totalQuantity = cart.reduce((total, plate) => total + plate.quantity, 0);
+  function createButton(label: string, id: string): HTMLButtonElement {
+    const button = document.createElement("button");
+    button.textContent = label;
+    button.id = id;
+    return button;
+  }
+
+  function updateTotalValues(): void {
+    totalQuantity = cart.reduce(
+      (total: number, plate: Plate) => total + plate.quantity,
+      0
+    );
     totalPrice = cart.reduce(
-      (total, plate) => total + plate.quantity * plate.price,
+      (total: number, plate: Plate) => total + plate.quantity * plate.price,
       0
     );
 
