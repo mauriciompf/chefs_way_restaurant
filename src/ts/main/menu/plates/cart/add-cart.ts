@@ -52,6 +52,7 @@ export function addCart(cart: Plate[]): void {
     priceLabel.textContent = `$${plate.price}`;
 
     const quantityDiv = document.createElement("div");
+    quantityDiv.classList.add("flex", "gap-2");
     const decreaseButton = createButton("-", `decrease-btn-${index}`);
     const quantitySpan = document.createElement("span");
     quantitySpan.id = `quantity-${index}`;
