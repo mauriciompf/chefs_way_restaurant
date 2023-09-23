@@ -1,34 +1,44 @@
 import "./plates/displayPlates";
 import { animateItem } from "./menu-anim";
 
-const buttons = document.querySelectorAll("[data-filter-btn]");
+const menubuttons = document.querySelectorAll("[data-filter-btn]");
 const items = document.querySelectorAll("[data-filter-item]");
 
-export default buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (button.classList.contains("border-pri-yellow")) {
-      return;
+function handleButtonClick(button: Element) {
+  if (button.classList.contains("border-pri-yellow")) {
+    return;
+  }
+
+  menubuttons.forEach((btn) => {
+    btn.classList.remove("border-pri-yellow", "border-4");
+    const span = btn.querySelector("span");
+    if (span) {
+      span.classList.remove("text-pri-yellow");
     }
+  });
 
-    buttons.forEach((btn) => {
-      btn.classList.remove("border-pri-yellow", "border-4");
-      btn.querySelector("span")!.classList.remove("text-pri-yellow");
-    });
-    button.classList.add("border-pri-yellow", "border-4");
-    button.querySelector("span")?.classList.add("text-pri-yellow");
+  button.classList.add("border-pri-yellow", "border-4");
+  const span = button.querySelector("span");
+  if (span) {
+    span.classList.add("text-pri-yellow");
+  }
 
-    const filterCategory = button.getAttribute("data-filter");
+  const filterCategory = button.getAttribute("data-filter");
 
-    items.forEach((item) => {
-      const itemCategory = item.getAttribute("data-category");
+  items.forEach((item) => {
+    const itemCategory = item.getAttribute("data-category");
 
-      if (filterCategory === "all" || filterCategory === itemCategory) {
-        animateItem(item);
+    if (filterCategory === "all" || filterCategory === itemCategory) {
+      animateItem(item);
+      item.classList.remove("hidden");
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+}
 
-        item.classList.remove("hidden");
-      } else {
-        item.classList.add("hidden");
-      }
-    });
+export default menubuttons.forEach((button): void => {
+  button.addEventListener("click", () => {
+    handleButtonClick(button);
   });
 });
