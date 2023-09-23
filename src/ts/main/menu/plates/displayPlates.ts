@@ -13,7 +13,8 @@ export interface Plate {
 const cart: Plate[] = [];
 
 const listPlates = document.querySelector(".list-plates") as HTMLElement;
-listPlates.innerHTML = "";
+
+listPlates.textContent = "";
 
 function changeImagePosition(name: string): string {
   return name === "Moonlight Mango Tango" || name === "Electric Eel Euphoria"
@@ -21,51 +22,101 @@ function changeImagePosition(name: string): string {
     : `-top-28`;
 }
 
-export default ((): void => {
+export default (() => {
   if (platesData != null) {
-    platesData.forEach((plateData: any) => {
+    platesData.forEach((plateData) => {
       const plate: Plate = { ...plateData, quantity: 0 };
 
       const newPlate = document.createElement("article");
-      newPlate.setAttribute("data-filter-item", "");
-      newPlate.setAttribute("data-category", plate.category);
-      newPlate.setAttribute(
-        "class",
-        "bg-pri-brown mx-auto mt-32 w-[min(100%,_350px)] rounded-lg px-6 shadow-2xl"
+      newPlate.dataset.filterItem = "";
+      newPlate.dataset.category = plate.category;
+      newPlate.classList.add(
+        "bg-pri-brown",
+        "mx-auto",
+        "mt-32",
+        "w-[min(100%,_350px)]",
+        "rounded-lg",
+        "px-6",
+        "shadow-2xl"
       );
 
-      newPlate.innerHTML = `
-        <div class="relative grid place-items-center">
-          <img 
-            class="select-none absolute ${changeImagePosition(
-              plate.name
-            )} w-[min(100%,_220px)]"
-            src="${plate.image}"
-            alt="${plate.name}"
-          />
-        </div>
-        <div class="grid gap-4 pt-32 text-center text-white">
-          <span class="font-playFair text-2xl font-bold"
-            >${plate.name}</span
-          >
-          <p class="text-xl">
-            ${plate.description}
-          </p>
-        </div>
-        <div
-          class="bg-pri-brown -mx-6 mt-4 rounded-b-lg text-xl brightness-200"
-        >
-          <div class="flex items-center justify-between px-6 py-2">
-            <span class="font-bold italic">$${plate.price}</span>
-            <button class="add-cart-btn" aria-label="Add food">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-          </div>
-        </div>
-        `;
+      const relativeDiv = document.createElement("div");
+      relativeDiv.classList.add("relative", "grid", "place-items-center");
+
+      const img = document.createElement("img");
+      img.classList.add(
+        "select-none",
+        "absolute",
+        changeImagePosition(plate.name),
+        "w-[min(100%,_220px)]"
+      );
+      img.src = plate.image;
+      img.alt = plate.name;
+
+      relativeDiv.appendChild(img);
+
+      const textDiv = document.createElement("div");
+      textDiv.classList.add(
+        "grid",
+        "gap-4",
+        "pt-32",
+        "text-center",
+        "text-white"
+      );
+
+      const nameSpan = document.createElement("span");
+      nameSpan.classList.add("font-playFair", "text-2xl", "font-bold");
+      nameSpan.textContent = plate.name;
+
+      const descriptionP = document.createElement("p");
+      descriptionP.classList.add("text-xl");
+      descriptionP.textContent = plate.description;
+
+      textDiv.appendChild(nameSpan);
+      textDiv.appendChild(descriptionP);
+
+      const bottomDiv = document.createElement("div");
+      bottomDiv.classList.add(
+        "bg-pri-brown",
+        "-mx-6",
+        "mt-4",
+        "rounded-b-lg",
+        "text-xl",
+        "brightness-200"
+      );
+
+      const flexDiv = document.createElement("div");
+      flexDiv.classList.add(
+        "flex",
+        "items-center",
+        "justify-between",
+        "px-6",
+        "py-2"
+      );
+
+      const priceSpan = document.createElement("span");
+      priceSpan.classList.add("font-bold", "italic");
+      priceSpan.textContent = `$${plate.price}`;
+
+      const cartButton = document.createElement("button");
+      cartButton.classList.add("add-cart-btn");
+      cartButton.setAttribute("aria-label", "Add food");
+      const cartIcon = document.createElement("i");
+      cartIcon.classList.add("fa-solid", "fa-cart-shopping");
+
+      cartButton.appendChild(cartIcon);
+
+      flexDiv.appendChild(priceSpan);
+      flexDiv.appendChild(cartButton);
+
+      bottomDiv.appendChild(flexDiv);
+
+      newPlate.appendChild(relativeDiv);
+      newPlate.appendChild(textDiv);
+      newPlate.appendChild(bottomDiv);
+
       listPlates.appendChild(newPlate);
 
-      const cartButton = newPlate.querySelector(".add-cart-btn") as HTMLElement;
       cartButton.addEventListener("click", () => {
         const cartItem = cart.find((item) => item.name === plate.name);
 
