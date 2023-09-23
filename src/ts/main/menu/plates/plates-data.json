@@ -4,7 +4,7 @@
         "name": "Galactic Gourmet",
         "description": "Smoky BBQ Ribs: Tender, tangy, and irresistible.",
         "price": 12.99,
-        "image": "./src/images/plate-1.svg",
+        "image": "/images/plate-1.svg",
         "category": "meat"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Rainbow Velvet Dream",
         "description": "Spicy Sausage Links: Fiery, flavorful, and sizzling.",
         "price": 9.99,
-        "image": "./src/images/plate-2.svg",
+        "image": "/images/plate-2.svg",
         "category": "meat"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Enchanted Forest Fusion",
         "description": "Juicy Bacon Strips: Crispy, savory, and mouthwatering.",
         "price": 6.99,
-        "image": "./src/images/plate-3.svg",
+        "image": "/images/plate-3.svg",
         "category": "meat"
     },
     {
@@ -28,7 +28,7 @@
         "name": "Moonlight Mango Tango",
         "description": "Classic Cheeseburger: Juicy, cheesy, and satisfying.",
         "price": 3.99,
-        "image": "./src/images/plate-burger.png",
+        "image": "/images/plate-burger.png",
         "category": "burger"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Celestial Crispy Nebula",
         "description": "Pepperoni Supreme: Cheesy, zesty, and loaded.",
         "price": 9.99,
-        "image": "./src/images/plate-pizza-1.png",
+        "image": "/images/plate-pizza-1.png",
         "category": "pizza"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Oceanic Oasis",
         "description": "Veggie Delight: Fresh, colorful, and wholesome.",
         "price": 7.99,
-        "image": "./src/images/plate-pizza-2.png",
+        "image": "/images/plate-pizza-2.png",
         "category": "pizza"
     },
     {
@@ -52,7 +52,7 @@
         "name": "Mystical Midnight",
         "description": "Hawaiian Bliss: Sweet, savory, and tropical.",
         "price": 11.99,
-        "image": "./src/images/plate-pizza-3.png",
+        "image": "/images/plate-pizza-3.png",
         "category": "pizza"
     },
     {
@@ -60,7 +60,7 @@
         "name": "Sunshine Serenade",
         "description": "Tropical Paradise: Refreshing, fruity, and exotic.",
         "price": 3.99,
-        "image": "./src/images/plate-drink.png",
+        "image": "/images/plate-drink.png",
         "category": "drink"
     },
     {
@@ -68,7 +68,7 @@
         "name": "Whimsical Wonderland",
         "description": "Chocolate Decadence: Rich, velvety, and indulgent.",
         "price": 4.99,
-        "image": "./src/images/plate-dessert-1.png",
+        "image": "/images/plate-dessert-1.png",
         "category": "dessert"
     },
     {
@@ -76,7 +76,7 @@
         "name": "Electric Eel Euphoria",
         "description": "Berry Bliss Parfait: Sweet, creamy, and fruity.",
         "price": 3.99,
-        "image": "./src/images/plate-dessert-2.png",
+        "image": "/images/plate-dessert-2.png",
         "category": "dessert"
     }
 ]
