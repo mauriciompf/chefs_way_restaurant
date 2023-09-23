@@ -1,45 +1,39 @@
-const input = document.querySelector("#input")!;
-const submitButton = document.querySelector("#submit")!;
+const input = document.querySelector("#input") as HTMLInputElement;
+const submitButton = document.querySelector("#submit") as HTMLButtonElement;
+const errorDisplay = input.parentElement?.querySelector("span") as HTMLElement;
 
-function hideError(element: HTMLElement) {
-  const inputControl = element.parentElement;
-  const displayError = inputControl?.querySelector("span")!;
-
-  displayError.classList.add("hidden");
-  element.classList.remove("outline-[3px_solid_darkred]", "bg-[palevioletred]");
+function hideError(): void {
+  errorDisplay.classList.add("hidden");
+  input.classList.remove("outline-[3px_solid_darkred]", "bg-[palevioletred]");
 }
 
-function showError(element: HTMLElement, errorMessage: string) {
-  const inputControl = element.parentElement!;
-  const displayError = inputControl.querySelector("span")!;
-
-  displayError.textContent = errorMessage;
-  displayError.classList.remove("hidden");
-  element.classList.add("outline-[3px_solid_darkred]", "bg-[palevioletred]");
+function showError(errorMessage: string): void {
+  errorDisplay.textContent = errorMessage;
+  errorDisplay.classList.remove("hidden");
+  input.classList.add("outline-[3px_solid_darkred]", "bg-[palevioletred]");
 }
 
-function validateEmail() {
-  const inputValue = (<HTMLInputElement>input).value;
-  const regex: RegExp =
-    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+function validateEmail(): void {
+  const inputValue = input.value.trim();
 
-  if (inputValue.length === 0 || inputValue === null) {
-    showError(<HTMLInputElement>input, "Can't be blank...");
+  if (inputValue.length === 0) {
+    showError("Email cannot be blank.");
   } else {
+    const regex: RegExp =
+      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+
     if (!regex.test(inputValue)) {
-      showError(<HTMLInputElement>input, "E-mail not valid...");
+      showError("Invalid email format.");
     } else {
-      hideError(<HTMLInputElement>input);
+      hideError();
     }
   }
 }
 
-export default (() => {
-  input?.addEventListener("input", () => {
-    validateEmail();
-  });
+export default ((): void => {
+  input.addEventListener("input", validateEmail);
 
-  submitButton?.addEventListener("click", (e) => {
+  submitButton.addEventListener("click", (e: Event) => {
     e.preventDefault();
     validateEmail();
   });
