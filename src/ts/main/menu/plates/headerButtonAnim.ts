@@ -1,9 +1,13 @@
 import { headerAnim } from "../../../header/header-anim";
 
-const showHeaderButtons = document.querySelectorAll(".add-cart-btn");
-
-export default showHeaderButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    headerAnim.play();
+export default function showHeaderElement(addCartButtons: HTMLElement[]) {
+  addCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      headerAnim.play();
+    });
   });
-});
+}
+
+const addCartButtons = document.querySelectorAll(".add-cart-btn");
+const addCartButtonsArray = [...addCartButtons] as HTMLElement[];
+showHeaderElement(addCartButtonsArray);
