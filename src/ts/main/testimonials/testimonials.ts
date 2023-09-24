@@ -1,4 +1,4 @@
-import testimonials from "./testimonials-data.json";
+import testimonials from "./testimonials-data.ts";
 
 interface TestimonialData {
   id: number;
@@ -44,6 +44,7 @@ export default ((): void => {
 
       const img = document.createElement("img");
       img.className = "w-[20%] rounded-full";
+      img.setAttribute("data-src", testimonial.image);
       img.src = testimonial.image;
       img.alt = testimonial.name;
 
