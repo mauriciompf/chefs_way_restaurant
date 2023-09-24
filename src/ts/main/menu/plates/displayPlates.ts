@@ -1,4 +1,4 @@
-import platesData from "./plates-data.json";
+import platesData from "./plates-data.ts";
 import { addCart } from "./cart/add-cart";
 
 export interface Plate {
@@ -50,6 +50,7 @@ export default (() => {
         changeImagePosition(plate.name),
         "w-[min(100%,_220px)]"
       );
+      img.setAttribute("data-src", plate.image);
       img.src = plate.image;
       img.alt = plate.name;
 
