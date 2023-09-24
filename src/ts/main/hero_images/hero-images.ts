@@ -1,4 +1,4 @@
-import heroImages from "./hero_images-data.json";
+import heroImages from "./hero_images-data.ts";
 
 interface HeroImage {
   name: string;
@@ -61,6 +61,7 @@ export default ((): void => {
         "lg:min-w-full",
         "max-lg:h-[150px]"
       );
+      img.setAttribute("data-src", heroImage.image);
       img.src = heroImage.image;
       img.alt = heroImage.name;
 
