@@ -1,6 +1,6 @@
-import imgUrl1 from "../../../images/avatar_1.svg";
-import imgUrl2 from "../../../images/avatar_2.jpg";
-import imgUrl3 from "../../../images/avatar_3.jpg";
+import imgUrl1 from "../../../images/avatar_1.webp";
+import imgUrl2 from "../../../images/avatar_2.webp";
+import imgUrl3 from "../../../images/avatar_3.webp";
 
 export default [
   {

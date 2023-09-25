@@ -1,8 +1,8 @@
-import imgUrl1 from "../../../images/food-hero_1.svg";
-import imgUrl2 from "../../../images/food-hero_2.jpg";
-import imgUrl3 from "../../../images/food-hero_3.jpg";
-import imgUrl4 from "../../../images/food-hero_4.jpg";
-import imgUrl5 from "../../../images/food-hero_5.jpg";
+import imgUrl1 from "../../../images/food-hero_1.webp";
+import imgUrl2 from "../../../images/food-hero_2.webp";
+import imgUrl3 from "../../../images/food-hero_3.webp";
+import imgUrl4 from "../../../images/food-hero_4.webp";
+import imgUrl5 from "../../../images/food-hero_5.webp";
 
 export default [
   {

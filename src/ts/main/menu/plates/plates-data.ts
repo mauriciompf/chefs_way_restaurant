@@ -1,13 +1,13 @@
-import imgUrl1 from "../../../../images/plate-1.svg";
-import imgUrl2 from "../../../../images/plate-2.svg";
-import imgUrl3 from "../../../../images/plate-3.svg";
-import imgUrl4 from "../../../../images/plate-burger.png";
-import imgUrl5 from "../../../../images/plate-pizza-1.png";
-import imgUrl6 from "../../../../images/plate-pizza-2.png";
-import imgUrl7 from "../../../../images/plate-pizza-3.png";
-import imgUrl8 from "../../../../images/plate-drink.png";
-import imgUrl9 from "../../../../images/plate-dessert-1.png";
-import imgUrl10 from "../../../../images/plate-dessert-2.png";
+import imgUrl1 from "../../../../images/plate-1.webp";
+import imgUrl2 from "../../../../images/plate-2.webp";
+import imgUrl3 from "../../../../images/plate-3.webp";
+import imgUrl4 from "../../../../images/plate-burger.webp";
+import imgUrl5 from "../../../../images/plate-pizza-1.webp";
+import imgUrl6 from "../../../../images/plate-pizza-2.webp";
+import imgUrl7 from "../../../../images/plate-pizza-3.webp";
+import imgUrl8 from "../../../../images/plate-drink.webp";
+import imgUrl9 from "../../../../images/plate-dessert-1.webp";
+import imgUrl10 from "../../../../images/plate-dessert-2.webp";
 
 export default [
   {
