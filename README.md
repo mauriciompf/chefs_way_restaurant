@@ -2,7 +2,7 @@
 
 A landing page website showcases the products online
 
-See the website demo: ![Chef's way Restaurant](https://mauriciompf.github.io/chefs_way_restaurant)
+See the website demo: [Chef's way Restaurant](https://mauriciompf.github.io/chefs_way_restaurant)
 
 ![Chef's Way Restaurant](./src/screenshots/screenshot_1.png)
 
