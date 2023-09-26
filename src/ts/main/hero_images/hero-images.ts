@@ -1,4 +1,4 @@
-import heroImages from "./hero_images-data.ts";
+import heroImages from "./hero_images-data.json";
 
 interface HeroImage {
   name: string;

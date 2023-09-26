@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Ana M.",
+    "stars": 5,
+    "description":
+      "Chef's Way redefined dining for me – a taste of heaven without compromising my health!",
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/avatar_1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Sima P.",
+    "stars": 5,
+    "description":
+      "Delightfully surprised at Chef's Way! Flavor-packed dishes that keep me on track.",
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/avatar_2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Syna F.",
+    "stars": 5,
+    "description":
+      "Healthy has never tasted this good! Thanks, Chef's Way, for the guilt-free indulgence.",
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/avatar_3.webp"
+  }
+]

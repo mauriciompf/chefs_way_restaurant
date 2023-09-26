@@ -1,4 +1,4 @@
-import testimonials from "./testimonials-data.ts";
+import testimonials from "./testimonials-data.json";
 
 interface TestimonialData {
   id: number;

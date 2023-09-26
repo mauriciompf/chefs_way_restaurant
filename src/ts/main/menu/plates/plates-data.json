@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Galactic Gourmet",
+    "description": "Smoky BBQ Ribs: Tender, tangy, and irresistible.",
+    "price": 12.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-1.webp",
+    "category": "meat"
+  },
+  {
+    "id": 2,
+    "name": "Rainbow Velvet Dream",
+    "description": "Spicy Sausage Links: Fiery, flavorful, and sizzling.",
+    "price": 9.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-2.webp",
+    "category": "meat"
+  },
+  {
+    "id": 3,
+    "name": "Enchanted Forest Fusion",
+    "description": "Juicy Bacon Strips: Crispy, savory, and mouthwatering.",
+    "price": 6.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-3.webp",
+    "category": "meat"
+  },
+  {
+    "id": 4,
+    "name": "Moonlight Mango Tango",
+    "description": "Classic Cheeseburger: Juicy, cheesy, and satisfying.",
+    "price": 3.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-burger.webp",
+    "category": "burger"
+  },
+  {
+    "id": 5,
+    "name": "Celestial Crispy Nebula",
+    "description": "Pepperoni Supreme: Cheesy, zesty, and loaded.",
+    "price": 9.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-pizza-1.webp",
+    "category": "pizza"
+  },
+  {
+    "id": 6,
+    "name": "Oceanic Oasis",
+    "description": "Veggie Delight: Fresh, colorful, and wholesome.",
+    "price": 7.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-pizza-2.webp",
+    "category": "pizza"
+  },
+  {
+    "id": 7,
+    "name": "Mystical Midnight",
+    "description": "Hawaiian Bliss: Sweet, savory, and tropical.",
+    "price": 11.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-pizza-3.webp",
+    "category": "pizza"
+  },
+  {
+    "id": 8,
+    "name": "Sunshine Serenade",
+    "description": "Tropical Paradise: Refreshing, fruity, and exotic.",
+    "price": 3.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-drink.webp",
+    "category": "drink"
+  },
+  {
+    "id": 9,
+    "name": "Whimsical Wonderland",
+    "description": "Chocolate Decadence: Rich, velvety, and indulgent.",
+    "price": 4.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-dessert-1.webp",
+    "category": "dessert"
+  },
+  {
+    "id": 10,
+    "name": "Electric Eel Euphoria",
+    "description": "Berry Bliss Parfait: Sweet, creamy, and fruity.",
+    "price": 3.99,
+    "image":
+      "https://raw.githubusercontent.com/mauriciompf/chefs_way_restaurant/master/uploads/plate-dessert-2.webp",
+    "category": "dessert"
+  }
+]

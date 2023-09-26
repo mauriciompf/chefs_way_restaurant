@@ -1,4 +1,4 @@
-import platesData from "./plates-data.ts";
+import platesData from "./plates-data.json";
 import { addCart } from "./cart/add-cart";
 
 export interface Plate {
