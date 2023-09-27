@@ -13,12 +13,8 @@ import "./main/menu/plates/displayPlates.ts";
 import "./main/menu/plates/cart/cart-toggle.ts";
 import "./main/menu/plates/headerButtonAnim.ts";
 
-// ABOUT US
-import "./main/about-us/about-us-anim.ts";
-
 // TESTIMONIALS SECTION
 import "./main/testimonials/testimonials.ts";
-import "./main/testimonials/testimonials-anim.ts";
 
 // EMAIL VALIDATION
 import "./main/validate-email.ts";
